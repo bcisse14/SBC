@@ -1,0 +1,17 @@
+{% extends 'email/layout.html.twig' %}
+{% import 'email/_rows.html.twig' as ui %}
+
+{% block caption %}Notification interne{% endblock %}
+
+{% block content %}
+<p style="margin:0 0 16px 0;">{{ intro|nl2br }}</p>
+<p style="margin:0 0 8px 0;font-family:Georgia,'Times New Roman',serif;font-size:22px;">Projet</p>
+{{ ui.rows(summary) }}
+<p style="margin:20px 0 8px 0;font-family:Georgia,'Times New Roman',serif;font-size:22px;">Description</p>
+<p style="margin:0;padding:12px 14px;border-left:2px solid #B4502E;background:#EEE9DF;">{{ description|nl2br }}</p>
+<p style="margin:20px 0 8px 0;font-family:Georgia,'Times New Roman',serif;font-size:22px;">Contact</p>
+{{ ui.rows(contact) }}
+{% if photoCount > 0 %}<p style="margin:16px 0 0 0;font-size:13px;">Photos jointes : {{ photoCount }} (consultables dans l’Atelier).</p>{% endif %}
+<p style="margin:24px 0 0 0;"><a href="{{ link }}" style="display:inline-block;background:#B4502E;color:#ffffff;text-decoration:none;padding:12px 20px;font-size:14px;">Ouvrir la fiche dans l’Atelier</a></p>
+<p style="margin:12px 0 0 0;font-size:12px;color:#6b665c;">Répondre à ce message écrit directement au client.</p>
+{% endblock %}

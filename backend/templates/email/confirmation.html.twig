@@ -1,0 +1,11 @@
+{% extends 'email/layout.html.twig' %}
+{% import 'email/_rows.html.twig' as ui %}
+
+{% block caption %}Confirmation{% endblock %}
+
+{% block content %}
+<p style="margin:0 0 16px 0;">{{ intro|nl2br }}</p>
+<p style="margin:0 0 8px 0;font-family:Georgia,'Times New Roman',serif;font-size:22px;">Récapitulatif de votre demande</p>
+{{ ui.rows(summary) }}
+<p style="margin:20px 0 0 0;">{{ outro|nl2br }}</p>
+{% endblock %}

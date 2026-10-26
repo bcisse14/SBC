@@ -1,0 +1,8 @@
+.git
+.execution-logs
+backend/var
+backend/vendor
+frontend/node_modules
+frontend/.next
+*.log
+backend/.env.local

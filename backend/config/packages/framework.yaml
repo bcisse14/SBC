@@ -1,0 +1,26 @@
+# see https://symfony.com/doc/current/reference/configuration/framework.html
+framework:
+    secret: '%env(APP_SECRET)%'
+
+    session:
+        cookie_secure: auto
+        cookie_httponly: true
+        cookie_samesite: lax
+
+    rate_limiter:
+        quote:
+            policy: fixed_window
+            limit: 6
+            interval: '10 minutes'
+        admin_login:
+            policy: fixed_window
+            limit: 5
+            interval: '15 minutes'
+
+    csrf_protection: true
+
+when@test:
+    framework:
+        test: true
+        session:
+            storage_factory_id: session.storage.factory.mock_file

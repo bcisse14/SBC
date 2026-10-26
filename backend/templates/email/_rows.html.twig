@@ -1,0 +1,10 @@
+{% macro rows(items) %}
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-top:1px solid #CFCABF;">
+{% for label, value in items %}
+<tr>
+<td style="padding:9px 12px 9px 0;border-bottom:1px solid #CFCABF;font-family:'DM Mono','Courier New',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:#9A4023;vertical-align:top;width:38%;">{{ label }}</td>
+<td style="padding:9px 0;border-bottom:1px solid #CFCABF;font-size:14px;color:#16191C;vertical-align:top;">{{ value }}</td>
+</tr>
+{% endfor %}
+</table>
+{% endmacro %}
