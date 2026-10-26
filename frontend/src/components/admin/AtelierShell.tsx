@@ -9,6 +9,7 @@ import { MediaLibrary } from "@/components/admin/MediaLibrary";
 import { SharedContentEditor } from "@/components/admin/SharedContentEditor";
 import { QuotesAdmin } from "@/components/admin/QuotesAdmin";
 import { SiteSettingsEditor } from "@/components/admin/SiteSettingsEditor";
+import { EstimatesAdmin } from "@/components/admin/EstimatesAdmin";
 
 const navigation = [
   { title: "Pour commencer", items: [["dashboard", "Vue d’ensemble", "⌂"], ["pages", "Pages du site", "▤"]] },
@@ -24,6 +25,7 @@ const navigation = [
   ] },
   { title: "Votre activité", items: [
     ["quotes", "Demandes de devis", "✉"], ["content", "E-mails automatiques", "↪"],
+    ["estimates", "Devis et clients", "▤"],
   ] },
 ];
 
@@ -197,7 +199,8 @@ export function AtelierShell() {
         {active === "media" ? <MediaLibrary media={media} upload={upload} refresh={refreshMedia} csrfToken={csrfToken} notify={notify} onDirty={onDirty} /> : null}
         {active === "settings" || active === "appearance" || active === "interface" ? <SiteSettingsEditor key={active} mode={active} csrfToken={csrfToken} media={media} upload={upload} notify={notify} onDirty={onDirty} /> : null}
         {active === "content" ? <SharedContentEditor module="content" csrfToken={csrfToken} notify={notify} onDirty={onDirty} /> : null}
-        {active === "quotes" ? <QuotesAdmin csrfToken={csrfToken} notify={notify} /> : null}
+        {active === "quotes" ? <QuotesAdmin csrfToken={csrfToken} notify={notify} createEstimate={(id) => navigate("estimates", id)} /> : null}
+        {active === "estimates" ? <EstimatesAdmin key={`estimates-${initialId ?? ""}`} initialRequestId={initialId} csrfToken={csrfToken} notify={notify} onDirty={onDirty} /> : null}
       </main>
       <footer className="px-6 pb-6 text-xs text-gray-400 lg:px-10">SBC Studio · Vos modifications ne sont publiées qu’après enregistrement.</footer>
     </div>

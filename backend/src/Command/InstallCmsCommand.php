@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Command;
 
 use App\Entity\{CmsDocument, PhotoSlot, Setting};
-use App\Service\{CmsCatalog, ContentResolver};
+use App\Service\{CmsCatalog, ContentResolver, LegalPageContent};
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
@@ -110,10 +110,7 @@ class InstallCmsCommand extends Command
                 $block('contact', 'Coordonnées'),
                 $block('text', '', '', ['photoSlotKey' => 'PH-CONTACT-AMBIANCE']),
             ]],
-            ['mentions-legales', 'Mentions légales', [
-                $block('hero', 'Mentions légales'),
-                $block('text', 'Informations légales', 'Les informations légales de l’entreprise sont à compléter : dénomination, adresse, contact, responsable de publication et hébergement.'),
-            ]],
+            ['mentions-legales', 'Mentions légales', LegalPageContent::sections()],
             ['politique-confidentialite', 'Politique de confidentialité', [
                 $block('hero', 'Politique de confidentialité'),
                 $block('text', 'Traitement des données', 'Cette page présente le traitement des données dans le cadre des demandes de devis. Complétez ce texte avec les durées de conservation, les destinataires et les modalités d’exercice des droits.'),

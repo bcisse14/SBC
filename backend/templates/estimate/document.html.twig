@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<style>
+@page { margin: 36px 36px 50px; }
+body { font-family: "DejaVu Sans", sans-serif; font-size: 10px; color: #26382e; line-height: 1.5; }
+h1 { font-size: 24px; margin: 0; }
+h2 { font-size: 12px; margin: 16px 0 6px; }
+p { margin: 4px 0; white-space: pre-wrap; overflow-wrap: break-word; }
+table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+td, th { vertical-align: top; padding: 7px; overflow-wrap: break-word; }
+th { background: #26382e; color: white; text-align: left; }
+.header td { padding: 0 12px 14px 0; }
+.items td { border-bottom: 1px solid #ddd; }
+.items thead { display: table-header-group; }
+.items tr { page-break-inside: avoid; }
+.right { text-align: right; }
+.muted { color: #657368; }
+.summary { width: 55%; margin: 18px 0 18px auto; page-break-inside: avoid; }
+.total { background: #eeeede; font-weight: bold; }
+.signature { border: 1px solid #ddd; padding: 12px; height: 75px; page-break-inside: avoid; }
+</style>
+</head>
+<body>
+<table class="header"><tr><td>
+<h1>Devis</h1><p>{{ estimate.number }}</p>
+<p>Date : {{ data.date|date('d/m/Y') }}<br>Valable jusqu’au : {{ data.validUntil|date('d/m/Y') }}</p>
+</td><td>
+<h2>{{ data.company.name }}</h2><p>{{ data.company.address }}</p>
+<p>{{ data.company.email }}<br>{{ data.company.phone }}</p>
+<p>{{ data.company.registration }}</p>
+{% if data.company.vatNumber %}<p>TVA : {{ data.company.vatNumber }}</p>{% endif %}
+</td></tr></table>
+<h2>Client</h2><p>{{ data.client.name }}<br>{{ data.client.address }}</p>
+<p>{{ data.client.email }}{% if data.client.phone %} / {{ data.client.phone }}{% endif %}</p>
+<h2>{{ data.title }}</h2><p>Adresse du chantier : {{ data.siteAddress }}</p>
+{% if data.introduction %}<p>{{ data.introduction }}</p>{% endif %}
+<table class="items">
+<thead><tr><th style="width: 35%">Désignation</th><th style="width: 10%">Qté</th><th style="width: 10%">Unité</th><th class="right" style="width: 16%">Prix HT</th><th class="right" style="width: 10%">TVA</th><th class="right" style="width: 19%">Total HT</th></tr></thead>
+<tbody>{% for line in data.lines %}<tr>
+<td><p>{{ line.description }}</p></td>
+<td>{{ line.quantity|number_format(3, ',', ' ') }}</td><td>{{ line.unit }}</td>
+<td class="right">{{ line.unitPrice|number_format(2, ',', ' ') }} €</td>
+<td class="right">{{ line.vatRate|number_format(2, ',', ' ') }} %</td>
+<td class="right">{{ (totals.lines[loop.index0].ht / 100)|number_format(2, ',', ' ') }} €</td>
+</tr>{% endfor %}</tbody></table>
+<table class="summary">
+<tr><td>Total HT</td><td class="right">{{ (totals.totalHt / 100)|number_format(2, ',', ' ') }} €</td></tr>
+{% for rate, amount in totals.vatGroups %}<tr><td>TVA {{ rate|number_format(2, ',', ' ') }} %</td><td class="right">{{ (amount / 100)|number_format(2, ',', ' ') }} €</td></tr>{% endfor %}
+<tr class="total"><td>Total TTC</td><td class="right">{{ (totals.totalTtc / 100)|number_format(2, ',', ' ') }} €</td></tr>
+<tr><td>Acompte {{ data.depositPercent|number_format(2, ',', ' ') }} %</td><td class="right">{{ (totals.deposit / 100)|number_format(2, ',', ' ') }} €</td></tr>
+<tr><td>Solde après acompte</td><td class="right">{{ (totals.balance / 100)|number_format(2, ',', ' ') }} €</td></tr>
+</table>
+{% if data.conditions %}<h2>Conditions et règlement</h2><p>{{ data.conditions }}</p>{% endif %}
+{% if data.company.insurance %}<h2>Assurance professionnelle</h2><p>{{ data.company.insurance }}</p>{% endif %}
+{% if data.notes %}<h2>Informations complémentaires</h2><p>{{ data.notes }}</p>{% endif %}
+<h2>Acceptation du devis</h2>
+<div class="signature">Bon pour accord, date et signature du client :</div>
+</body>
+</html>

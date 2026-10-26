@@ -41,6 +41,7 @@ export function SiteFooter({ company, navItems, legalItems, titles, settings = {
             <img src={`/api/media/${settings.brand_logo_id}`} className="site-brand-logo" alt={company.name} />
           ) : <>{company.name}<span>.</span></>}</Link>
           <p>{siteText(settings, "footer_signature", "Rénovation, avec justesse.")}</p>
+          <a href="https://bafodecisse.fr/">Site réalisé par Karlsefni</a>
           <a href="#top">{siteText(settings, "back_top", "Retour en haut")} ↑</a>
         </div>
       </div>

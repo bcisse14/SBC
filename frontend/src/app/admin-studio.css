@@ -166,3 +166,6 @@
   .cms-tabs button { font-size: 11px; }
   .cms-collection-toolbar input, .cms-collection-toolbar select { max-width: none; width: 100%; flex-basis: 100%; }
 }
+.cms-estimate-line { border: 1px solid var(--beton); border-radius: 12px; padding: 1.25rem; margin-bottom: 1rem; }
+.cms-estimate-totals { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .75rem 1rem; max-width: 30rem; margin-left: auto; }
+.cms-estimate-totals dd { text-align: right; font-variant-numeric: tabular-nums; }

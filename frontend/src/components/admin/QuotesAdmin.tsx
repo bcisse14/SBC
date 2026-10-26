@@ -15,7 +15,7 @@ const statuses: Record<string, string> = {
   won: "Gagné", lost: "Perdu", archived: "Archivé",
 };
 
-export function QuotesAdmin({ csrfToken, notify }: { csrfToken: string; notify: (message: string, error?: boolean) => void }) {
+export function QuotesAdmin({ csrfToken, notify, createEstimate }: { csrfToken: string; notify: (message: string, error?: boolean) => void; createEstimate: (requestId: number) => void }) {
   const [quotes, setQuotes] = useState<Quote[]>([]);
   const [selected, setSelected] = useState<number | null>(null);
   const [search, setSearch] = useState("");
@@ -55,6 +55,8 @@ export function QuotesAdmin({ csrfToken, notify }: { csrfToken: string; notify: 
       </div>
       {quote ? <article className="cms-panel space-y-5 p-6">
         <h3 className="font-serif text-4xl">{quote.firstName} {quote.lastName}</h3>
+        <button type="button" className="btn-primary" onClick={() => createEstimate(quote.id)}>Créer le devis</button>
+        <p className="cms-help">Reprenez les coordonnées et le projet, chiffrez les prestations puis enregistrez un brouillon ou téléchargez le PDF. Les devis déjà créés se retrouvent dans Devis et clients.</p>
         <div className="space-y-2 text-sm"><p><a className="underline" href={`mailto:${quote.email}`}>{quote.email}</a></p><p><a className="underline" href={`tel:${quote.phone}`}>{quote.phone}</a></p>
           <p>{quote.postalCode} {quote.city}</p>{quote.callbackTime ? <p>Rappel : {quote.callbackTime}</p> : null}</div>
         <label className="field-label">Statut du dossier<select className="field-input" value={quote.status} disabled={busy} onChange={async (event) => {

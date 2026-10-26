@@ -54,6 +54,11 @@ Les galeries, carrousels et pages sont consultables ; l'administration et l'envo
 - Header `X-Robots-Tag: noindex, nofollow` applique sur `/atelier-admin` et ses sous-pages. Cette adresse ne remplace pas l'authentification.
 - La deconnexion invalide la session et renvoie du JSON a l'interface avant son retour sur `/atelier-admin/login`.
 
+## Mentions legales
+La page `/mentions-legales` contient un modele generique et les credits du createur Karlsefni (cissebafode.pro@gmail.com, https://bafodecisse.fr/), distinct de l'editeur SBC. Sur une installation existante, executer `docker compose exec backend php bin/console app:legal:compose` apres reconstruction du backend. Cette commande remplace une seule fois les sections de cette page et conserve les modifications ulterieures du Studio. Les nouvelles installations utilisent le meme modele.
+
+Les informations juridiques inconnues ne sont pas inventees : SBC doit completer son identification, son responsable de publication, l'hebergeur de production et les mentions applicables a son activite. Ce modele ne vaut pas validation juridique. La page reste editable dans **Pages et navigation**. Rafraichir la copie de demonstration apres modification pour un prochain deploiement Vercel.
+
 ## Atelier : gestion autonome du site
 - Le Studio propose des raccourcis par tache et un acces direct a chaque page depuis le tableau de bord. La navigation est recherchable, adaptee au mobile et conserve le module ouvert dans l'URL.
 - Les contenus sont presentes sous forme de cartes avec recherche et filtre de publication. L'edition d'une page separe le contenu, l'adresse et les menus, puis le referencement. Une barre d'enregistrement reste accessible pendant l'edition.
@@ -78,6 +83,12 @@ Les galeries, carrousels et pages sont consultables ; l'administration et l'envo
 - Ces reglages sont decrits et valides dans `SiteEditor`. `GET /api/admin/site-editor` fournit les champs et leurs valeurs effectives, et `PUT` enregistre uniquement les champs modifies, apres validation de l'ensemble. Les valeurs par defaut sont appliquees sans migration ni rechargement des fixtures. Les logos et icones utilises sont proteges contre la suppression en mediatheque.
 - **Textes des e-mails** : personnalisation des confirmations et notifications. Un texte enregistre vide reste vide, sans reintroduire son texte par defaut.
 - **Demandes de devis** : recherche, filtrage, fiche complete, coordonnees, pieces jointes et changement de statut.
+- **Creer le devis** depuis une demande ouvre un document chiffre avec le client et la description du projet pre-remplis. Le nouvel espace **Devis et clients** rassemble les brouillons, les fiches entreprise et les fiches clients. Il est aussi possible de creer un devis sans demande.
+- Les fiches privees conservent nom, adresse, e-mail et telephone ; la fiche entreprise ajoute immatriculation, forme juridique/capital, numero de TVA et assurance. Elles se selectionnent dans l'editeur et peuvent etre creees ou mises a jour depuis les coordonnees du devis. La derniere fiche entreprise modifiee pre-remplit les nouveaux devis ; en son absence, les coordonnees publiques servent de base. Enregistrer une fiche et enregistrer un devis sont deux actions distinctes.
+- Chaque devis conserve une copie autonome des coordonnees. Modifier ou supprimer une fiche ne change ni un ancien devis ni la demande d'origine. Les brouillons restent modifiables et reprenables apres rechargement ; ils ne sont jamais inclus dans les contenus publics ou la demonstration Vercel.
+- Le devis contient titre, dates, chantier, presentation, prestations (designation, quantite, unite, prix unitaire HT, TVA), acompte, conditions et informations complementaires. Les montants sont calcules sur le serveur en entiers : prix en centimes, quantites jusqu'a trois decimales, arrondi au centime par ligne, TVA par ligne puis addition, acompte sur le TTC et solde. Taux proposes : 0 %, 5,5 %, 10 % et 20 %. Les prix sont positifs ou nuls ; les quantites strictement positives. Limites : 100 lignes et 10 millions d'euros HT par devis.
+- **Telecharger le PDF** exporte uniquement le brouillon enregistre, avec numero automatique unique `DEV-ANNEE-ID`, detail des taux, totaux et zone de signature manuscrite. Les champs essentiels (entreprise, client, adresses, immatriculation et prestations) sont controles avant export. Verifier les mentions applicables, l'assurance, le regime de TVA et les conditions de paiement/execution avant de transmettre le document. Ce module ne constitue pas un controle de conformite juridique, une signature electronique ou une facturation.
+- Aucun e-mail de devis n'est envoye, et un telechargement ne marque pas automatiquement la demande comme envoyee. Les PDF sont generes a la demande cote Symfony avec Dompdf, sans chargement de ressources distantes, derriere la meme authentification que les fiches et les devis. Ils ne sont pas stockes dans la mediatheque publique.
 - Les pages publiees alimentent automatiquement les menus et le sitemap. Les modifications sont visibles a la prochaine requete, sans attendre une expiration de cache.
 - Tous les textes enregistres par les modules CMS sont normalises pour retirer les tirets interdits. Les liens et les references aux images sont controles cote serveur.
 - L'editeur utilise des blocs structures, pas du HTML ou du JavaScript libre. Aucune dependance a un CMS ou a un stockage de medias externe n'est ajoutee. L'envoi des e-mails conserve le transport Resend existant.
@@ -99,6 +110,9 @@ Ne pas recharger les fixtures pour effectuer cette mise a jour : elles purgent l
 - `docker compose exec backend php bin/console doctrine:schema:validate`
 - `docker compose exec backend php tests/cms-smoke.php`
 - `docker compose exec backend php tests/project-photos-smoke.php`
+- `docker compose exec backend php tests/estimates-smoke.php`
+
+La suite devis cree uniquement des donnees de controle, puis les supprime : reprise d'une demande, fiches reutilisables, isolation des copies, validations, calculs et arrondis, brouillons incomplets, export PDF simple et multipage, authentification et CSRF. Aucun e-mail n'est envoye. La migration `Version20261026160000` ajoute uniquement les tables privees ; elle doit etre appliquee avant d'utiliser ce module sur une installation existante.
 
 La suite CMS verifie les neuf ressources, les treize types de sections, la publication et l'ordre, les champs de presentation, les medias et leurs protections, les emplacements partages, les textes d'e-mails, les sept statuts de devis et les pieces jointes. Tous les reglages du constructeur font un aller-retour d'enregistrement. Les entrees invalides, les acces non authentifies, les jetons CSRF et la deconnexion sont aussi controles.
 
