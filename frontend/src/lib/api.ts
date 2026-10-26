@@ -51,6 +51,9 @@ function normalize(content: Record<string, string>, years: string): Record<strin
 }
 
 export async function getSiteBootstrap(): Promise<SiteBootstrap> {
+  if (process.env.NEXT_PUBLIC_DEMO_MODE === "1") {
+    return (await import("@/data/demo-site.json")).default as SiteBootstrap;
+  }
   const baseUrl = process.env.API_BASE_URL ?? process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://localhost:8080";
 
   const response = await fetch(`${baseUrl}/api/site/bootstrap`, {
@@ -73,6 +76,9 @@ export async function getSiteBootstrap(): Promise<SiteBootstrap> {
 }
 
 export async function submitQuote(payload: QuotePayload): Promise<{ ok: boolean; message: string }> {
+  if (process.env.NEXT_PUBLIC_DEMO_MODE === "1") {
+    throw new Error("Version de démonstration : aucune demande n’est envoyée.");
+  }
   const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL ?? "";
 
   const csrfResponse = await fetch(`${baseUrl}/api/admin/csrf`, {

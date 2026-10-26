@@ -37,6 +37,16 @@ Monorepo MySQL + Symfony + Next.js pour le site public SBC et son CMS prive "SBC
 - Atelier prive: `/atelier-admin` (defini par `ADMIN_PATH` et `NEXT_PUBLIC_ADMIN_PATH`)
 - MySQL reste prive au reseau Docker, sans port hote expose par defaut.
 
+## Demonstration client sur Vercel (frontend seul)
+Le mode demonstration utilise une copie des contenus publics et des photos dans le frontend, sans Symfony ni MySQL.
+1. Dans Vercel, choisir `frontend` comme **Root Directory**, avec le framework Next.js.
+2. Ajouter `NEXT_PUBLIC_DEMO_MODE=1` et `NEXT_PUBLIC_SITE_URL=https://votre-projet.vercel.app`.
+3. Deployer ou redeployer. Aucune variable API ni aucun secret backend n'est necessaire.
+
+La copie est incluse dans `frontend/src/data/demo-site.json` et `frontend/public/demo/media/`. Pour la rafraichir depuis le site local, executer `cd frontend && npm run demo:export`, puis deployer les fichiers actualises. `DEMO_SOURCE_URL` permet de choisir une autre installation source. L'export ne contient ni comptes, ni devis, ni textes d'e-mails ou adresses de notification.
+
+Les galeries, carrousels et pages sont consultables ; l'administration et l'envoi de devis sont desactives et les moteurs de recherche sont invites a ne pas indexer cette version. Cela ne remplace pas un controle d'acces : activer la protection des deploiements Vercel si la presentation doit rester privee. Pour le vrai site connecte au backend, desactiver `NEXT_PUBLIC_DEMO_MODE` puis redeployer.
+
 ## Securite admin
 - Authentification session cookie httpOnly (Symfony Security).
 - Routes admin serveur sous /api/admin/* protegees par roles.

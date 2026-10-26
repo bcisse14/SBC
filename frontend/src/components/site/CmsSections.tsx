@@ -230,7 +230,9 @@ export function CmsSections({ sections, data, filter = {}, home = false, pageTit
             </article>;
           })}
         </div> : null}
-        {type === "quote" ? <div className="site-section-content site-quote-panel">{data.services.length
+        {type === "quote" ? <div className="site-section-content site-quote-panel">{process.env.NEXT_PUBLIC_DEMO_MODE === "1"
+          ? <p role="status">Version de démonstration : le formulaire sera disponible lors de la mise en ligne du site. Aucune demande ne peut être envoyée ici.</p>
+          : data.services.length
           ? <QuoteForm settings={data.settings} preselectedService={filter.service} services={data.services.map((service) => service.name)} />
           : <p role="status" className="text-sm leading-7">{text("form_unavailable", "Le formulaire de devis est momentanément indisponible. Vous pouvez nous joindre directement aux coordonnées indiquées sur le site.")}</p>}</div> : null}
         {type === "contact" ? <div className="site-section-content site-contact-grid">

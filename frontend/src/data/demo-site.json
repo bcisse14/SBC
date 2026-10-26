@@ -1,0 +1,1219 @@
+{
+  "settings": {
+    "company_name": "SBC",
+    "company_phone": "À COMPLÉTER",
+    "company_email": "À COMPLÉTER",
+    "company_address": "À COMPLÉTER",
+    "company_hours": "À COMPLÉTER",
+    "company_intervention_area": "Région parisienne",
+    "experience_years": "25",
+    "slogan_primary": "Avec SBC, vos projets se réalisent avec style et fiabilité",
+    "slogan_secondary": "SBC, la qualité, la durabilité, le service sur mesure",
+    "seo_description": "SBC, entrepreneur général en rénovation dans la région parisienne.",
+    "brand_logo_id": "",
+    "brand_icon_id": "",
+    "cta_label": "Demander un devis",
+    "cta_url": "/contact#devis",
+    "announcement_top": "",
+    "footer_contact_title": "Coordonnées",
+    "footer_pages_title": "Pages",
+    "footer_legal_title": "Informations",
+    "footer_kicker": "Parlons de votre projet",
+    "footer_signature": "Rénovation, avec justesse.",
+    "theme_paper": "#faf9f5",
+    "theme_surface": "#eeeede",
+    "theme_ink": "#26382e",
+    "theme_accent": "#425b46",
+    "theme_accent_dark": "#2b4430",
+    "theme_border": "#d9dacf",
+    "theme_hero": "#26382e",
+    "theme_hero_text": "#faf9f5",
+    "theme_heading_font": "serif",
+    "theme_body_font": "sans",
+    "theme_width": "1240",
+    "theme_radius": "12",
+    "theme_button_radius": "999",
+    "theme_text_size": "16",
+    "theme_hero_height": "640",
+    "theme_hero_split": "45",
+    "theme_density": "comfortable",
+    "show_header": "1",
+    "sticky_header": "1",
+    "show_footer": "1",
+    "show_mobile_contact": "1",
+    "show_hero_proof": "1",
+    "show_service_photos": "1",
+    "hero_kicker": "Rénovation & aménagement",
+    "hero_projects": "Découvrir nos réalisations",
+    "hero_caption": "Une réalisation {company_name}",
+    "hero_photo_label": "Aménagement sur mesure",
+    "proof_experience": "{experience_years} ans",
+    "proof_experience_detail": "d’expérience",
+    "proof_contact": "Un seul interlocuteur",
+    "proof_contact_detail": "de l’idée au chantier",
+    "section_kicker": "Le sens du détail",
+    "family_interieur_label": "Intérieur",
+    "family_interieur_title": "Intérieurs",
+    "family_interieur_description": "Des pièces dans lesquelles on se sent bien.",
+    "family_exterieur_label": "Extérieur",
+    "family_exterieur_title": "Extérieurs",
+    "family_exterieur_description": "Prendre soin de votre maison, au-dehors aussi.",
+    "family_projet_global_label": "Projet global",
+    "family_projet_global_title": "Projets sur mesure",
+    "family_projet_global_description": "Une vision d’ensemble, un accompagnement complet.",
+    "filter_all": "Tous",
+    "services_discover": "Découvrir les prestations",
+    "services_unit": "prestation",
+    "services_photo_kicker": "Du savoir-faire au résultat",
+    "services_photo_title": "Des prestations qui prennent vie.",
+    "services_empty": "Aucune prestation ne correspond à ce filtre. Sélectionnez « Tous » pour retrouver nos services.",
+    "project_view": "Voir la réalisation",
+    "project_discover": "Voir le projet",
+    "photo_unit": "photo",
+    "project_unit": "Projet",
+    "learn_more": "En savoir plus",
+    "gallery_zoom": "Agrandir",
+    "gallery_close": "Fermer",
+    "gallery_scroll": "Faites défiler les {count} photos",
+    "gallery_previous": "Photo précédente",
+    "gallery_next": "Photo suivante",
+    "menu_open": "Menu",
+    "menu_close": "Fermer",
+    "back_top": "Retour en haut",
+    "call_label": "Appeler",
+    "skip_link": "Aller au contenu",
+    "map_notice": "La carte se charge uniquement à votre demande.",
+    "map_button": "Afficher la carte",
+    "map_title": "Carte de la région parisienne",
+    "map_url": "https://www.openstreetmap.org/export/embed.html?bbox=1.45%2C48.55%2C3.05%2C49.15&layer=mapnik",
+    "announcement_news": "Actualité",
+    "announcement_offer": "Offre",
+    "announcement_job": "Emploi",
+    "announcement_information": "Information",
+    "form_progress": "Progression",
+    "form_step_project": "Projet",
+    "form_step_details": "Détails",
+    "form_step_contact": "Coordonnées",
+    "form_property_type": "Type de bien",
+    "form_house": "Maison",
+    "form_apartment": "Appartement",
+    "form_commercial": "Local",
+    "form_services": "Prestations souhaitées",
+    "form_description": "Description du projet",
+    "form_city": "Ville",
+    "form_postal_code": "Code postal",
+    "form_budget": "Budget indicatif",
+    "form_select": "Sélectionnez",
+    "form_budget_low": "Moins de 15 000 EUR",
+    "form_budget_medium": "15 000 EUR à 40 000 EUR",
+    "form_budget_high": "40 000 EUR à 80 000 EUR",
+    "form_budget_large": "Plus de 80 000 EUR",
+    "form_timeline": "Délai souhaité",
+    "form_timeline_fast": "Dans 1 à 2 mois",
+    "form_timeline_medium": "Dans 3 à 6 mois",
+    "form_timeline_flexible": "Calendrier souple",
+    "form_visit": "Je souhaite une visite sur place",
+    "form_photos": "Photos du projet, 5 maximum",
+    "form_photos_help": "JPG, PNG ou WebP, 8 Mo maximum par fichier.",
+    "form_first_name": "Prénom",
+    "form_last_name": "Nom",
+    "form_email": "E-mail",
+    "form_phone": "Téléphone",
+    "form_callback": "Moment préféré pour être rappelé",
+    "form_consent": "J’accepte que mes données soient utilisées pour traiter ma demande de devis.",
+    "form_required": "Merci de vérifier les champs obligatoires.",
+    "form_previous": "Étape précédente",
+    "form_next": "Étape suivante",
+    "form_sending": "Envoi en cours...",
+    "form_send": "Envoyer la demande",
+    "form_error_property": "Choisissez un type de bien.",
+    "form_error_services": "Choisissez au moins une prestation.",
+    "form_error_description": "Décrivez votre projet en 20 caractères minimum.",
+    "form_error_city": "Indiquez une ville.",
+    "form_error_postal": "Indiquez un code postal à 5 chiffres.",
+    "form_unavailable": "Le formulaire de devis est momentanément indisponible. Vous pouvez nous joindre directement aux coordonnées indiquées sur le site.",
+    "show_photo_markers": "1"
+  },
+  "pages": [
+    {
+      "slug": "",
+      "title": "Accueil",
+      "sections": [
+        {
+          "id": "5745b7997ff49c00",
+          "body": "Rénovation intérieure, extérieure et aménagement sur mesure en région parisienne. Un seul interlocuteur, de vos premières idées aux dernières finitions.",
+          "tone": "default",
+          "type": "hero",
+          "cards": [],
+          "label": "SBC / Rénovation",
+          "title": "Des espaces pensés pour votre vie.",
+          "width": "full",
+          "hidden": false,
+          "layout": "auto",
+          "columns": "auto",
+          "gallery": [],
+          "linkUrl": "/contact#devis",
+          "spacing": "default",
+          "imageFit": "cover",
+          "alignment": "left",
+          "hideImage": false,
+          "linkLabel": "Demander un devis",
+          "mediaAssetId": 8,
+          "photoSlotKey": "PH-ACCUEIL-HERO",
+          "presentation": "auto"
+        },
+        {
+          "id": "2c4b560e90e7f689",
+          "body": "De la première idée aux dernières finitions, nous coordonnons votre rénovation en région parisienne. Notre métier : transformer vos envies en espaces durables, fonctionnels et agréables à vivre.",
+          "tone": "default",
+          "type": "text",
+          "cards": [],
+          "label": "Un projet, un interlocuteur",
+          "title": "{experience_years} ans, à vos côtés.",
+          "width": "full",
+          "hidden": false,
+          "layout": "auto",
+          "columns": "auto",
+          "gallery": [],
+          "linkUrl": "",
+          "spacing": "default",
+          "imageFit": "cover",
+          "alignment": "left",
+          "hideImage": false,
+          "linkLabel": "",
+          "mediaAssetId": null,
+          "photoSlotKey": "",
+          "presentation": "auto"
+        },
+        {
+          "id": "7c7e93caf2432964",
+          "body": "",
+          "tone": "default",
+          "type": "realisations",
+          "cards": [],
+          "label": "La preuve par les espaces",
+          "title": "Des espaces transformés",
+          "width": "full",
+          "hidden": false,
+          "layout": "auto",
+          "columns": "auto",
+          "gallery": [],
+          "linkUrl": "",
+          "spacing": "default",
+          "imageFit": "cover",
+          "alignment": "left",
+          "hideImage": false,
+          "linkLabel": "",
+          "mediaAssetId": null,
+          "photoSlotKey": "",
+          "presentation": "auto"
+        },
+        {
+          "id": "2e049d69a97cfc8c",
+          "body": "Des murs qui parlent, des espaces qui respirent. Votre chez-vous réinventé.\n\nOffrez à votre espace intérieur une transformation élégante et fonctionnelle. Nos experts se chargent de rénover votre intérieur avec des matériaux de première qualité, adaptés à vos besoins et à vos goûts.",
+          "tone": "default",
+          "type": "text",
+          "cards": [],
+          "label": "",
+          "title": "Rénovation intérieure complète",
+          "width": "full",
+          "hidden": true,
+          "layout": "auto",
+          "columns": "auto",
+          "gallery": [],
+          "linkUrl": "",
+          "spacing": "default",
+          "imageFit": "cover",
+          "alignment": "left",
+          "hideImage": false,
+          "linkLabel": "",
+          "mediaAssetId": null,
+          "photoSlotKey": "",
+          "presentation": "auto"
+        },
+        {
+          "id": "ff872c1029ee7098",
+          "body": "Procédez à la rénovation de votre espace extérieur avec nos solutions sur mesure. Que ce soit pour une terrasse ou une façade, nous améliorons l’esthétique et la durabilité de vos extérieurs.\n\nFaçades / toitures : donnez une nouvelle jeunesse à l’enveloppe de votre maison.",
+          "tone": "default",
+          "type": "text",
+          "cards": [],
+          "label": "",
+          "title": "Rénovation extérieure moderne",
+          "width": "full",
+          "hidden": true,
+          "layout": "auto",
+          "columns": "auto",
+          "gallery": [],
+          "linkUrl": "",
+          "spacing": "default",
+          "imageFit": "cover",
+          "alignment": "left",
+          "hideImage": false,
+          "linkLabel": "",
+          "mediaAssetId": null,
+          "photoSlotKey": "",
+          "presentation": "auto"
+        },
+        {
+          "id": "ceff6c45670cabf3",
+          "body": "",
+          "tone": "default",
+          "type": "services",
+          "cards": [],
+          "label": "",
+          "title": "Nos métiers",
+          "width": "full",
+          "hidden": false,
+          "layout": "auto",
+          "columns": "auto",
+          "gallery": [],
+          "linkUrl": "",
+          "spacing": "default",
+          "imageFit": "cover",
+          "alignment": "left",
+          "hideImage": false,
+          "linkLabel": "",
+          "mediaAssetId": null,
+          "photoSlotKey": "",
+          "presentation": "auto"
+        },
+        {
+          "id": "b99c4bbd3210585a",
+          "body": "",
+          "tone": "default",
+          "type": "cards",
+          "cards": [
+            {
+              "body": "Planification et coordination du chantier",
+              "title": "Gestion"
+            },
+            {
+              "body": "Validation des choix techniques et esthétiques",
+              "title": "Conception"
+            },
+            {
+              "body": "Exécution et contrôle qualité de chaque étape",
+              "title": "Réalisation"
+            }
+          ],
+          "label": "",
+          "title": "Méthode clé en main",
+          "width": "full",
+          "hidden": false,
+          "layout": "auto",
+          "columns": "auto",
+          "gallery": [],
+          "linkUrl": "",
+          "spacing": "default",
+          "imageFit": "cover",
+          "alignment": "left",
+          "hideImage": false,
+          "linkLabel": "",
+          "mediaAssetId": null,
+          "photoSlotKey": "",
+          "presentation": "auto"
+        },
+        {
+          "id": "7817c1b68ab6c799",
+          "body": "",
+          "tone": "default",
+          "type": "reviews",
+          "cards": [],
+          "label": "",
+          "title": "Ils nous font confiance",
+          "width": "full",
+          "hidden": false,
+          "layout": "auto",
+          "columns": "auto",
+          "gallery": [],
+          "linkUrl": "",
+          "spacing": "default",
+          "imageFit": "cover",
+          "alignment": "left",
+          "hideImage": false,
+          "linkLabel": "",
+          "mediaAssetId": null,
+          "photoSlotKey": "",
+          "presentation": "auto"
+        },
+        {
+          "id": "861d00264451e910",
+          "body": "",
+          "tone": "default",
+          "type": "announcements",
+          "cards": [],
+          "label": "",
+          "title": "Nos actualités",
+          "width": "full",
+          "hidden": false,
+          "layout": "auto",
+          "columns": "auto",
+          "gallery": [],
+          "linkUrl": "",
+          "spacing": "default",
+          "imageFit": "cover",
+          "alignment": "left",
+          "hideImage": false,
+          "linkLabel": "",
+          "mediaAssetId": null,
+          "photoSlotKey": "",
+          "presentation": "auto"
+        },
+        {
+          "id": "1e33e1ad75d1594f",
+          "body": "Découvrez nos options de rénovation avec une consultation sur place pour discuter de votre projet et obtenir un devis adapté à vos besoins et votre budget. Obtenez une estimation rapide et précise.",
+          "tone": "default",
+          "type": "text",
+          "cards": [],
+          "label": "",
+          "title": "Un projet en tête ?",
+          "width": "full",
+          "hidden": false,
+          "layout": "auto",
+          "columns": "auto",
+          "gallery": [],
+          "linkUrl": "/contact#devis",
+          "spacing": "default",
+          "imageFit": "cover",
+          "alignment": "left",
+          "hideImage": false,
+          "linkLabel": "Demander un devis",
+          "mediaAssetId": null,
+          "photoSlotKey": "",
+          "presentation": "auto"
+        },
+        {
+          "id": "01f807276a50d79f",
+          "body": "",
+          "tone": "dark",
+          "type": "partners",
+          "cards": [],
+          "label": "",
+          "title": "Nos partenaires",
+          "width": "full",
+          "hidden": false,
+          "layout": "auto",
+          "columns": "auto",
+          "gallery": [],
+          "linkUrl": "",
+          "spacing": "compact",
+          "imageFit": "cover",
+          "alignment": "left",
+          "hideImage": false,
+          "linkLabel": "",
+          "mediaAssetId": null,
+          "photoSlotKey": "",
+          "presentation": "auto"
+        }
+      ],
+      "showInFooter": false,
+      "seoDescription": "",
+      "showInNavigation": true,
+      "id": 1,
+      "sortOrder": 0,
+      "isPublished": true
+    },
+    {
+      "slug": "services",
+      "title": "Services",
+      "sections": [
+        {
+          "id": "aa143a2b358e6d27",
+          "body": "Des solutions adaptées à chaque projet.",
+          "type": "hero",
+          "cards": [],
+          "label": "",
+          "title": "Services",
+          "hidden": false,
+          "gallery": [],
+          "linkUrl": "",
+          "linkLabel": "",
+          "mediaAssetId": null
+        },
+        {
+          "id": "62c2bd766e18c9d0",
+          "body": "",
+          "type": "services",
+          "cards": [],
+          "label": "",
+          "title": "",
+          "hidden": false,
+          "gallery": [],
+          "linkUrl": "",
+          "linkLabel": "",
+          "mediaAssetId": null
+        },
+        {
+          "id": "cba6da04e5c7745b",
+          "body": "",
+          "type": "faq",
+          "cards": [],
+          "label": "",
+          "title": "Questions fréquentes",
+          "hidden": false,
+          "gallery": [],
+          "linkUrl": "",
+          "linkLabel": "",
+          "mediaAssetId": null
+        }
+      ],
+      "seoDescription": "",
+      "showInNavigation": true,
+      "id": 2,
+      "sortOrder": 1,
+      "isPublished": true
+    },
+    {
+      "slug": "realisations",
+      "title": "Réalisations",
+      "sections": [
+        {
+          "id": "609abd6016fc0b2c",
+          "body": "Salles de bains, chambre et aménagements sur mesure : découvrez notre travail à travers ces espaces réalisés.",
+          "type": "hero",
+          "cards": [],
+          "label": "",
+          "title": "Des espaces transformés",
+          "hidden": false,
+          "gallery": [],
+          "linkUrl": "",
+          "linkLabel": "",
+          "mediaAssetId": null
+        },
+        {
+          "id": "1da06fa8d02d167c",
+          "body": "",
+          "type": "realisations",
+          "cards": [],
+          "label": "",
+          "title": "",
+          "hidden": false,
+          "gallery": [],
+          "linkUrl": "",
+          "linkLabel": "",
+          "mediaAssetId": null
+        },
+        {
+          "id": "6c98f6b2d0d0d221",
+          "body": "Décrivez votre projet, nous revenons vers vous avec une proposition adaptée.",
+          "type": "text",
+          "cards": [],
+          "label": "",
+          "title": "Un projet en tête ?",
+          "hidden": false,
+          "gallery": [],
+          "linkUrl": "/contact#devis",
+          "linkLabel": "Demander un devis",
+          "mediaAssetId": null
+        }
+      ],
+      "seoDescription": "",
+      "showInNavigation": true,
+      "id": 3,
+      "sortOrder": 2,
+      "isPublished": true
+    },
+    {
+      "slug": "a-propos",
+      "title": "À propos",
+      "sections": [
+        {
+          "id": "5a7b29c45c24d496",
+          "body": "SBC accompagne les particuliers dans leurs projets de rénovation intérieure et extérieure en région parisienne. Nous coordonnons la gestion, la conception et la réalisation de travaux sur mesure.",
+          "type": "hero",
+          "cards": [],
+          "label": "",
+          "title": "Avec SBC, vos projets se réalisent avec style et fiabilité",
+          "hidden": false,
+          "gallery": [],
+          "linkUrl": "",
+          "linkLabel": "",
+          "mediaAssetId": null
+        },
+        {
+          "id": "878e86ecd00daa17",
+          "body": "",
+          "type": "gallery",
+          "cards": [],
+          "label": "",
+          "title": "Notre équipe",
+          "hidden": false,
+          "gallery": [],
+          "linkUrl": "",
+          "linkLabel": "",
+          "mediaAssetId": null
+        },
+        {
+          "id": "2c9651a22e344f9f",
+          "body": "",
+          "type": "cards",
+          "cards": [
+            {
+              "body": "Processus rigoureux, suivi à chaque étape.",
+              "title": "Qualité"
+            },
+            {
+              "body": "Choix de solutions techniques adaptées au logement.",
+              "title": "Durabilité"
+            },
+            {
+              "body": "Coordination complète du projet selon vos priorités.",
+              "title": "Service sur mesure"
+            }
+          ],
+          "label": "",
+          "title": "Nos engagements",
+          "hidden": false,
+          "gallery": [],
+          "linkUrl": "",
+          "linkLabel": "",
+          "mediaAssetId": null
+        },
+        {
+          "id": "324612b5a6fb6ec3",
+          "body": "",
+          "type": "certifications",
+          "cards": [],
+          "label": "",
+          "title": "Nos certifications",
+          "hidden": false,
+          "gallery": [],
+          "linkUrl": "",
+          "linkLabel": "",
+          "mediaAssetId": null
+        },
+        {
+          "id": "783ad4402044cfed",
+          "body": "Région parisienne",
+          "type": "text",
+          "cards": [],
+          "label": "",
+          "title": "Zones d’intervention",
+          "hidden": false,
+          "gallery": [],
+          "linkUrl": "/contact#devis",
+          "linkLabel": "Demander un devis",
+          "mediaAssetId": null
+        }
+      ],
+      "seoDescription": "",
+      "showInNavigation": true,
+      "id": 4,
+      "sortOrder": 3,
+      "isPublished": true
+    },
+    {
+      "slug": "contact",
+      "title": "Contact",
+      "sections": [
+        {
+          "id": "72ed01e930979dcd",
+          "body": "Décrivez vos besoins pour recevoir une estimation adaptée.",
+          "type": "hero",
+          "cards": [],
+          "label": "",
+          "title": "Parlons de votre projet",
+          "hidden": false,
+          "gallery": [],
+          "linkUrl": "",
+          "linkLabel": "",
+          "mediaAssetId": null
+        },
+        {
+          "id": "0de59f2937bcf85d",
+          "body": "",
+          "type": "quote",
+          "cards": [],
+          "label": "",
+          "title": "Demande de devis",
+          "hidden": false,
+          "gallery": [],
+          "linkUrl": "",
+          "linkLabel": "",
+          "mediaAssetId": null
+        },
+        {
+          "id": "eca768c1ed982c4e",
+          "body": "",
+          "type": "contact",
+          "cards": [],
+          "label": "",
+          "title": "Coordonnées",
+          "hidden": false,
+          "gallery": [],
+          "linkUrl": "",
+          "linkLabel": "",
+          "mediaAssetId": null
+        },
+        {
+          "id": "9194b953de35c8cd",
+          "body": "",
+          "type": "text",
+          "cards": [],
+          "label": "",
+          "title": "",
+          "hidden": false,
+          "gallery": [],
+          "linkUrl": "",
+          "linkLabel": "",
+          "mediaAssetId": null
+        }
+      ],
+      "seoDescription": "",
+      "showInNavigation": true,
+      "id": 5,
+      "sortOrder": 4,
+      "isPublished": true
+    },
+    {
+      "slug": "mentions-legales",
+      "title": "Mentions légales",
+      "sections": [
+        {
+          "id": "ce57c0da53e01095",
+          "body": "",
+          "type": "hero",
+          "cards": [],
+          "label": "",
+          "title": "Mentions légales",
+          "hidden": false,
+          "gallery": [],
+          "linkUrl": "",
+          "linkLabel": "",
+          "mediaAssetId": null
+        },
+        {
+          "id": "f233207cd5cc73c8",
+          "body": "Les informations légales de l’entreprise sont à compléter : dénomination, adresse, contact, responsable de publication et hébergement.",
+          "type": "text",
+          "cards": [],
+          "label": "",
+          "title": "Informations légales",
+          "hidden": false,
+          "gallery": [],
+          "linkUrl": "",
+          "linkLabel": "",
+          "mediaAssetId": null
+        }
+      ],
+      "seoDescription": "",
+      "showInNavigation": false,
+      "id": 7,
+      "sortOrder": 5,
+      "isPublished": true
+    },
+    {
+      "slug": "politique-confidentialite",
+      "title": "Politique de confidentialité",
+      "sections": [
+        {
+          "id": "a054c3d0b9994e5f",
+          "body": "",
+          "type": "hero",
+          "cards": [],
+          "label": "",
+          "title": "Politique de confidentialité",
+          "hidden": false,
+          "gallery": [],
+          "linkUrl": "",
+          "linkLabel": "",
+          "mediaAssetId": null
+        },
+        {
+          "id": "7ee9c3f19f36616f",
+          "body": "Cette page présente le traitement des données dans le cadre des demandes de devis. Complétez ce texte avec les durées de conservation, les destinataires et les modalités d’exercice des droits.",
+          "type": "text",
+          "cards": [],
+          "label": "",
+          "title": "Traitement des données",
+          "hidden": false,
+          "gallery": [],
+          "linkUrl": "",
+          "linkLabel": "",
+          "mediaAssetId": null
+        }
+      ],
+      "seoDescription": "",
+      "showInNavigation": false,
+      "id": 8,
+      "sortOrder": 6,
+      "isPublished": true
+    }
+  ],
+  "announcements": [],
+  "content": {
+    "home.hero.title": "Votre vision, notre expertise. Nous transformons vos espaces intérieurs et extérieurs avec audace et précision.",
+    "home.hero.subtitle": "Que ce soit pour un coup de pinceau frais ou une métamorphose complète, nous donnons vie à vos rêves.",
+    "home.intro.p1": "Chez SBC, nous réalisons des projets de rénovation de petite et grande envergure depuis plus de {experience_years} ans. Aménagement ou agrandissement, notre équipe de professionnels est à votre disposition pour réaliser un projet sur mesure, répondant à vos besoins et préférences.",
+    "home.intro.p2": "Puisque nous avons à cœur d’être votre entrepreneur général en rénovation de confiance dans toute la région parisienne, nous vous proposons un service clé en main allant de la gestion, la conception à la réalisation de votre projet.",
+    "home.intro.p3": "Meubles de rangement, robinetterie, carrelage, doublage / isolation, revêtement, plomberie, électricité, peinture, nous sommes à votre écoute pour concrétiser votre projet de rénovation ou agrandissement.",
+    "home.interior.title": "Rénovation intérieure complète",
+    "home.interior.tagline": "Des murs qui parlent, des espaces qui respirent. Votre chez-vous réinventé.",
+    "home.interior.body": "Offrez à votre espace intérieur une transformation élégante et fonctionnelle. Nos experts se chargent de rénover votre intérieur avec des matériaux de première qualité, adaptés à vos besoins et à vos goûts.",
+    "home.exterior.title": "Rénovation extérieure moderne",
+    "home.exterior.body": "Procédez à la rénovation de votre espace extérieur avec nos solutions sur mesure. Que ce soit pour une terrasse ou une façade, nous améliorons l’esthétique et la durabilité de vos extérieurs.",
+    "home.exterior.focus": "Façades / toitures : donnez une nouvelle jeunesse à l’enveloppe de votre maison.",
+    "home.consultation": "Découvrez nos options de rénovation avec une consultation sur place pour discuter de votre projet et obtenir un devis adapté à vos besoins et votre budget. Obtenez une estimation rapide et précise.",
+    "about.company": "SBC accompagne les particuliers dans leurs projets de rénovation intérieure et extérieure en région parisienne. Nous coordonnons la gestion, la conception et la réalisation de travaux sur mesure.",
+    "partners.intro": "Nous sélectionnons des fournisseurs, fabricants et artisans partenaires en fonction de la qualité des matériaux, de la fiabilité des délais et de la cohérence avec les besoins de chaque chantier.",
+    "realisations.intro": "Nos réalisations sont présentées par type d’aménagement. Chaque catégorie réunit les photos de travaux déjà réalisés ; les catégories à venir seront ajoutées au fil des mises à jour."
+  },
+  "services": [
+    {
+      "id": 66,
+      "name": "Cuisine",
+      "group": "interieur",
+      "description": "À COMPLÉTER",
+      "items": [
+        "À COMPLÉTER"
+      ],
+      "mediaAssetId": null
+    },
+    {
+      "id": 67,
+      "name": "Salle de bain",
+      "group": "interieur",
+      "description": "À COMPLÉTER",
+      "items": [
+        "À COMPLÉTER"
+      ],
+      "mediaAssetId": 2
+    },
+    {
+      "id": 68,
+      "name": "Peinture",
+      "group": "interieur",
+      "description": "À COMPLÉTER",
+      "items": [
+        "À COMPLÉTER"
+      ],
+      "mediaAssetId": null
+    },
+    {
+      "id": 69,
+      "name": "Carrelage et revêtements",
+      "group": "interieur",
+      "description": "À COMPLÉTER",
+      "items": [
+        "À COMPLÉTER"
+      ],
+      "mediaAssetId": null
+    },
+    {
+      "id": 70,
+      "name": "Doublage et isolation",
+      "group": "interieur",
+      "description": "À COMPLÉTER",
+      "items": [
+        "À COMPLÉTER"
+      ],
+      "mediaAssetId": null
+    },
+    {
+      "id": 71,
+      "name": "Plomberie et robinetterie",
+      "group": "interieur",
+      "description": "À COMPLÉTER",
+      "items": [
+        "À COMPLÉTER"
+      ],
+      "mediaAssetId": null
+    },
+    {
+      "id": 72,
+      "name": "Électricité",
+      "group": "interieur",
+      "description": "À COMPLÉTER",
+      "items": [
+        "À COMPLÉTER"
+      ],
+      "mediaAssetId": null
+    },
+    {
+      "id": 73,
+      "name": "Meubles de rangement sur mesure",
+      "group": "interieur",
+      "description": "À COMPLÉTER",
+      "items": [
+        "À COMPLÉTER"
+      ],
+      "mediaAssetId": 8
+    },
+    {
+      "id": 74,
+      "name": "Façades",
+      "group": "exterieur",
+      "description": "À COMPLÉTER",
+      "items": [
+        "À COMPLÉTER"
+      ],
+      "mediaAssetId": null
+    },
+    {
+      "id": 75,
+      "name": "Toitures",
+      "group": "exterieur",
+      "description": "À COMPLÉTER",
+      "items": [
+        "À COMPLÉTER"
+      ],
+      "mediaAssetId": null
+    },
+    {
+      "id": 76,
+      "name": "Terrasses",
+      "group": "exterieur",
+      "description": "À COMPLÉTER",
+      "items": [
+        "À COMPLÉTER"
+      ],
+      "mediaAssetId": null
+    },
+    {
+      "id": 77,
+      "name": "Aménagement et agrandissement",
+      "group": "projet_global",
+      "description": "À COMPLÉTER",
+      "items": [
+        "À COMPLÉTER"
+      ],
+      "mediaAssetId": null
+    },
+    {
+      "id": 78,
+      "name": "Gestion de projet clé en main",
+      "group": "projet_global",
+      "description": "À COMPLÉTER",
+      "items": [
+        "À COMPLÉTER"
+      ],
+      "mediaAssetId": null
+    }
+  ],
+  "realisationCategories": [
+    {
+      "id": 1,
+      "title": "Rénovation salle de bains",
+      "slug": "renovation-salle-de-bains",
+      "description": "Rénovation complète de salle de bains avec douche vitrée, carrelage contemporain et finitions soignées.",
+      "serviceId": 67,
+      "serviceGroup": "interieur",
+      "serviceName": "Salle de bain",
+      "gallery": [
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Rénovation chambre",
+      "slug": "renovation-chambre",
+      "description": "Rénovation d’une chambre avec peinture bleu profond, parquet chaleureux et finitions soignées.",
+      "serviceId": 68,
+      "serviceGroup": "interieur",
+      "serviceName": "Peinture",
+      "gallery": [
+        6
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Aménagement sur mesure",
+      "slug": "amenagement-sur-mesure",
+      "description": "Du séjour à l’espace nuit, des rangements et du mobilier intégrés pour optimiser chaque espace.",
+      "serviceId": 77,
+      "serviceGroup": "projet_global",
+      "serviceName": "Aménagement et agrandissement",
+      "gallery": [
+        8,
+        7
+      ]
+    }
+  ],
+  "media": {
+    "2": {
+      "id": 2,
+      "version": "5d884f692b50",
+      "alt": "Salle de bains, douche vitrée et meuble vasque",
+      "width": 517,
+      "height": 690,
+      "focalPoint": null,
+      "variants": [],
+      "demoPath": "/demo/media/2.jpg"
+    },
+    "3": {
+      "id": 3,
+      "version": "26bcd0e83bdc",
+      "alt": "Salle de bains, douche et sèche-serviettes",
+      "width": 562,
+      "height": 750,
+      "focalPoint": null,
+      "variants": [],
+      "demoPath": "/demo/media/3.jpg"
+    },
+    "4": {
+      "id": 4,
+      "version": "5aed36403659",
+      "alt": "Salle de bains, double vasque et douche à l’italienne",
+      "width": 693,
+      "height": 804,
+      "focalPoint": null,
+      "variants": [],
+      "demoPath": "/demo/media/4.jpg"
+    },
+    "5": {
+      "id": 5,
+      "version": "3aae34f1934a",
+      "alt": "Salle de bains, carrelage sombre et miroirs lumineux",
+      "width": 608,
+      "height": 811,
+      "focalPoint": null,
+      "variants": [],
+      "demoPath": "/demo/media/5.jpg"
+    },
+    "6": {
+      "id": 6,
+      "version": "8cc4cefa4d1a",
+      "alt": "Chambre rénovée, mur bleu, parquet et commode en bois",
+      "width": 649,
+      "height": 788,
+      "focalPoint": null,
+      "variants": [],
+      "demoPath": "/demo/media/6.jpg"
+    },
+    "7": {
+      "id": 7,
+      "version": "f9caa0b67e83",
+      "alt": "Espace nuit avec mobilier et rangements intégrés sur mesure",
+      "width": 501,
+      "height": 502,
+      "focalPoint": null,
+      "variants": [],
+      "demoPath": "/demo/media/7.jpg"
+    },
+    "8": {
+      "id": 8,
+      "version": "5fb2c175f491",
+      "alt": "Séjour avec bibliothèque et rangements intégrés sur mesure",
+      "width": 457,
+      "height": 470,
+      "focalPoint": null,
+      "variants": [],
+      "demoPath": "/demo/media/8.jpg"
+    }
+  },
+  "reviews": [],
+  "certifications": [],
+  "partners": [
+    {
+      "name": "Lorem ipsum",
+      "category": "Peinture",
+      "websiteUrl": null,
+      "logoMediaId": null
+    },
+    {
+      "name": "Dolor sit amet",
+      "category": "Peinture",
+      "websiteUrl": null,
+      "logoMediaId": null
+    },
+    {
+      "name": "Consectetur adipiscing",
+      "category": "Peinture",
+      "websiteUrl": null,
+      "logoMediaId": null
+    },
+    {
+      "name": "Lorem ipsum",
+      "category": "Plâtrerie, cloisons, isolation",
+      "websiteUrl": null,
+      "logoMediaId": null
+    },
+    {
+      "name": "Dolor sit amet",
+      "category": "Plâtrerie, cloisons, isolation",
+      "websiteUrl": null,
+      "logoMediaId": null
+    },
+    {
+      "name": "Consectetur adipiscing",
+      "category": "Plâtrerie, cloisons, isolation",
+      "websiteUrl": null,
+      "logoMediaId": null
+    },
+    {
+      "name": "Lorem ipsum",
+      "category": "Salles de bains / sanitaires",
+      "websiteUrl": null,
+      "logoMediaId": null
+    },
+    {
+      "name": "Dolor sit amet",
+      "category": "Salles de bains / sanitaires",
+      "websiteUrl": null,
+      "logoMediaId": null
+    },
+    {
+      "name": "Consectetur adipiscing",
+      "category": "Salles de bains / sanitaires",
+      "websiteUrl": null,
+      "logoMediaId": null
+    },
+    {
+      "name": "Lorem ipsum",
+      "category": "Électricité et domotique",
+      "websiteUrl": null,
+      "logoMediaId": null
+    },
+    {
+      "name": "Dolor sit amet",
+      "category": "Électricité et domotique",
+      "websiteUrl": null,
+      "logoMediaId": null
+    },
+    {
+      "name": "Consectetur adipiscing",
+      "category": "Électricité et domotique",
+      "websiteUrl": null,
+      "logoMediaId": null
+    }
+  ],
+  "faq": [],
+  "photoSlots": [
+    {
+      "slotKey": "PH-ACCUEIL-HERO",
+      "ratio": "1:1",
+      "minimumSize": "457x470, source fournie",
+      "idealDescription": "Aménagement sur mesure, bibliothèque et rangements intégrés dans un séjour",
+      "mediaAssetId": 8
+    },
+    {
+      "slotKey": "PH-ACCUEIL-INTERIEUR",
+      "ratio": "4:5",
+      "minimumSize": "min 1600x2000",
+      "idealDescription": "Détail intérieur avec matériaux soignés",
+      "mediaAssetId": null
+    },
+    {
+      "slotKey": "PH-ACCUEIL-EXTERIEUR",
+      "ratio": "4:5",
+      "minimumSize": "min 1600x2000",
+      "idealDescription": "Façade rénovée ou terrasse aménagée",
+      "mediaAssetId": null
+    },
+    {
+      "slotKey": "PH-ACCUEIL-METIER-01",
+      "ratio": "1:1",
+      "minimumSize": "min 1400x1400",
+      "idealDescription": "Mise en peinture nette, outil en action",
+      "mediaAssetId": null
+    },
+    {
+      "slotKey": "PH-ACCUEIL-METIER-02",
+      "ratio": "1:1",
+      "minimumSize": "min 1400x1400",
+      "idealDescription": "Pose carrelage ou revetement",
+      "mediaAssetId": null
+    },
+    {
+      "slotKey": "PH-ACCUEIL-METIER-03",
+      "ratio": "1:1",
+      "minimumSize": "min 1400x1400",
+      "idealDescription": "Intervention plomberie ou electricite",
+      "mediaAssetId": null
+    },
+    {
+      "slotKey": "PH-ACCUEIL-BANDEAU-DEVIS",
+      "ratio": "16:9",
+      "minimumSize": "min 2400x1350",
+      "idealDescription": "Vue chantier propre et organise",
+      "mediaAssetId": null
+    },
+    {
+      "slotKey": "PH-CONTACT-AMBIANCE",
+      "ratio": "4:5",
+      "minimumSize": "min 1600x2000",
+      "idealDescription": "Photo atelier ou equipe en reunion",
+      "mediaAssetId": null
+    },
+    {
+      "slotKey": "PH-PARTENAIRE-LOGO-01",
+      "ratio": "3:2",
+      "minimumSize": "min 900x600",
+      "idealDescription": "Logo partenaire sur fond neutre",
+      "mediaAssetId": null
+    },
+    {
+      "slotKey": "PH-PARTENAIRE-LOGO-02",
+      "ratio": "3:2",
+      "minimumSize": "min 900x600",
+      "idealDescription": "Logo partenaire sur fond neutre",
+      "mediaAssetId": null
+    },
+    {
+      "slotKey": "PH-PARTENAIRE-LOGO-03",
+      "ratio": "3:2",
+      "minimumSize": "min 900x600",
+      "idealDescription": "Logo partenaire sur fond neutre",
+      "mediaAssetId": null
+    },
+    {
+      "slotKey": "PH-PARTENAIRE-LOGO-04",
+      "ratio": "3:2",
+      "minimumSize": "min 900x600",
+      "idealDescription": "Logo partenaire sur fond neutre",
+      "mediaAssetId": null
+    },
+    {
+      "slotKey": "PH-PARTENAIRE-LOGO-05",
+      "ratio": "3:2",
+      "minimumSize": "min 900x600",
+      "idealDescription": "Logo partenaire sur fond neutre",
+      "mediaAssetId": null
+    },
+    {
+      "slotKey": "PH-PARTENAIRE-LOGO-06",
+      "ratio": "3:2",
+      "minimumSize": "min 900x600",
+      "idealDescription": "Logo partenaire sur fond neutre",
+      "mediaAssetId": null
+    },
+    {
+      "slotKey": "PH-PARTENAIRE-LOGO-07",
+      "ratio": "3:2",
+      "minimumSize": "min 900x600",
+      "idealDescription": "Logo partenaire sur fond neutre",
+      "mediaAssetId": null
+    },
+    {
+      "slotKey": "PH-PARTENAIRE-LOGO-08",
+      "ratio": "3:2",
+      "minimumSize": "min 900x600",
+      "idealDescription": "Logo partenaire sur fond neutre",
+      "mediaAssetId": null
+    },
+    {
+      "slotKey": "PH-ABOUT-PORTRAIT",
+      "ratio": "4:5",
+      "minimumSize": "min 1600x1600",
+      "idealDescription": "Portrait du dirigeant",
+      "mediaAssetId": null
+    },
+    {
+      "slotKey": "PH-ABOUT-EQUIPE",
+      "ratio": "3:2",
+      "minimumSize": "min 1600x1600",
+      "idealDescription": "Équipe sur chantier",
+      "mediaAssetId": null
+    },
+    {
+      "slotKey": "PH-ABOUT-CHANTIER",
+      "ratio": "3:2",
+      "minimumSize": "min 1600x1600",
+      "idealDescription": "Chantier en cours",
+      "mediaAssetId": null
+    }
+  ]
+}
