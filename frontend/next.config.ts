@@ -2,6 +2,12 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   allowedDevOrigins: ["localhost:8080", "127.0.0.1:8080"],
+  async redirects() {
+    return [
+      { source: "/realisations", destination: "/services", permanent: true },
+      { source: "/realisations/:slug", destination: "/services/:slug", permanent: true },
+    ];
+  },
   async rewrites() {
     if (process.env.NEXT_PUBLIC_DEMO_MODE === "1") {
       const demo = (await import("./src/data/demo-site.json")).default;

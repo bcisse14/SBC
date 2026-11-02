@@ -127,6 +127,9 @@ Les tests utilisent un compte et des contenus temporaires, puis restaurent les r
 Le test HTTP utilise l'URL interne `http://nginx` (modifiable avec `CMS_TEST_BASE_URL`), cree un compte et des contenus temporaires, puis les retire dans un bloc de nettoyage. Il controle l'authentification, le CSRF, les collections, les brouillons, les publications, les annonces programmees, l'ordre, la validation, l'import d'image, la protection des medias utilises et la suppression physique des fichiers.
 
 ## Realisations par categorie
+- Sept expertises (`renovation-generale`, `renovation-interieure`, `peinture-finitions`, `menuiserie`, `parquet`, `electricite`, `plomberie-sanitaires`) ont chacune une carte sur `/services` et une page de detail `/services/{slug}` (les anciennes adresses `/realisations` redirigent). Le champ `summary` (resume de la carte) et la description (texte de la page, titres `## ` et listes `- `) se modifient dans Atelier > Realisations. Sans photo, la page affiche des emplacements "Photo a venir" ; les photos s'ajoutent dans la galerie de la categorie.
+- Installation existante, apres reconstruction du backend et `app:photos:sync` : `docker compose exec backend php bin/console app:expertises:compose` puis `app:services:merge` (fusionne la page Realisations dans la page Services et la supprime) et `app:company:identity` (SARL SBC, 183-189 avenue de Choisy, 75013 Paris, carte). Chaque commande s'execute une seule fois et conserve ensuite les modifications du Studio. Le reglage `company_legal_name` alimente les devis et les mentions legales.
+- Les deux photos d'amenagement des fixtures ont ete recadrees en bas pour retirer le filigrane de l'appareil photo ; les originaux de `photos_realisations/` sont intacts.
 - Entite `RealisationCategory`: titre, slug, description, service associe (`tagService`), galerie ordonnee, ordre, statut (brouillon / publie). Aucun champ ville, annee, duree ou surface.
 - Fixtures: 3 categories publiees construites depuis `backend/fixtures/photos/` : 4 photos de salles de bains, 1 chambre (`chambre-01.jpeg`) et 2 amenagements (`amenagement-01.jpg`, `amenagement-02.jpg`). Les noms et dossiers corriges de `photos_realisations/` font reference. L'ancien `sdb-05.jpeg` est la chambre ; l'ancien `chambre-01.jpg` est `amenagement-02.jpg`.
 - Les quatre salles de bains des fixtures ont ete tournees de 90 degres vers la droite pour retrouver leur orientation verticale. Les fichiers fournis dans `photos_realisations/` ne sont pas modifies. Ne pas appliquer une deuxieme rotation aux fixtures corrigees.
@@ -161,7 +164,7 @@ Le test HTTP utilise l'URL interne `http://nginx` (modifiable avec `CMS_TEST_BAS
 
 Ces emplacements restent disponibles pour compatibilite avec les pages existantes. Ils ne constituent pas une liste de photos a fournir : les emplacements vides ne sont pas affiches sur le site public.
 - Accueil
-  - PH-ACCUEIL-HERO, amenagement-01.jpg, affichage carre, source 457x470
+  - PH-ACCUEIL-HERO, amenagement-01.jpg, affichage carre, source 457x418
   - PH-ACCUEIL-INTERIEUR, ratio 4:5, min 1600x2000
   - PH-ACCUEIL-EXTERIEUR, ratio 4:5, min 1600x2000
   - PH-ACCUEIL-METIER-01, ratio 1:1, min 1400x1400

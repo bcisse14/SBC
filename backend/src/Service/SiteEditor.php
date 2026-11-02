@@ -20,8 +20,8 @@ class SiteEditor
             $fields[$key] = ['group' => $group, 'label' => $label, 'default' => $value, 'type' => $type, ...$extra];
         };
         foreach ([
-            'company_name' => ['Nom de l’entreprise', 'SBC'], 'company_phone' => ['Téléphone', ''],
-            'company_email' => ['E-mail public', ''], 'company_address' => ['Adresse', ''],
+            'company_name' => ['Nom de l’entreprise', 'SBC'], 'company_legal_name' => ['Raison sociale (mentions légales, devis, coordonnées)', 'SARL SBC'], 'company_phone' => ['Téléphone', ''],
+            'company_email' => ['E-mail public', ''], 'company_address' => ['Adresse', '183-189 avenue de Choisy, 75013 Paris'],
             'company_hours' => ['Horaires', ''], 'company_intervention_area' => ['Zone d’intervention', 'Région parisienne'],
             'experience_years' => ['Années d’expérience', '25'], 'slogan_primary' => ['Signature principale', ''],
             'slogan_secondary' => ['Signature secondaire', ''], 'seo_description' => ['Description générale pour Google', ''],
@@ -75,7 +75,7 @@ class SiteEditor
         }
         foreach ([
             'hero_kicker' => ['Repère au-dessus du titre', 'Rénovation & aménagement'],
-            'hero_projects' => ['Lien vers les réalisations', 'Découvrir nos réalisations'],
+            'hero_projects' => ['Lien vers les expertises', 'Découvrir nos expertises'],
             'hero_caption' => ['Légende de la photo', 'Une réalisation {company_name}'],
             'hero_photo_label' => ['Type de réalisation en légende', 'Aménagement sur mesure'],
             'proof_experience' => ['Repère d’expérience', '{experience_years} ans'],

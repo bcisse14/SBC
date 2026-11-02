@@ -14,6 +14,7 @@ export type RealisationCategory = {
   id: number;
   title: string;
   slug: string;
+  summary: string;
   description: string;
   serviceId: number | null;
   serviceGroup: string | null;

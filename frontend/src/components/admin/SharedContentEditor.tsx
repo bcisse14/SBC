@@ -6,7 +6,7 @@ import { adminRequest, errorMessage } from "@/lib/admin-api";
 type Entry = { id: number; settingKey?: string; settingValue?: string | null; contentKey?: string; customValue?: string | null; defaultValue?: string };
 
 const labels: Record<string, string> = {
-  company_name: "Nom de l’entreprise", company_phone: "Téléphone", company_email: "E-mail public",
+  company_name: "Nom de l’entreprise", company_legal_name: "Raison sociale (mentions légales, devis, coordonnées)", company_phone: "Téléphone", company_email: "E-mail public",
   company_address: "Adresse", company_hours: "Horaires", company_intervention_area: "Zone d’intervention",
   slogan_primary: "Signature principale", slogan_secondary: "Signature secondaire",
   experience_years: "Années d’expérience", announcement_top: "Bandeau en haut du site (vide pour masquer)",

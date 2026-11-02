@@ -7,6 +7,7 @@ import { QuoteForm } from "@/components/forms/QuoteForm";
 import { MapReveal } from "@/components/site/MapReveal";
 import { siteText } from "@/lib/site-customization";
 import { PartnerCarousels } from "@/components/site/PartnerCarousels";
+import { ExpertiseCard } from "@/components/site/Expertise";
 
 const announcementTypes = { news: "Actualité", offer: "Offre", job: "Emploi", information: "Information" };
 const defaultServiceFamilies = [
@@ -36,7 +37,7 @@ export function CmsSections({ sections, data, filter = {}, home = false, pageTit
   }));
   const ctaUrl = data.settings.cta_url ?? "/contact#devis";
   const ctaLabel = data.settings.cta_label ?? "Demander un devis";
-  const realisationsPage = data.pages.find((page) => page.slug === "realisations")
+  const realisationsPage = data.pages.find((page) => page.slug === "services")
     ?? data.pages.find((page) => page.slug && page.sections.some((section) => section.type === "realisations" && !section.hidden));
   const servicesPage = data.pages.find((page) => page.slug === "services")
     ?? data.pages.find((page) => page.slug && page.sections.some((section) => section.type === "services" && !section.hidden));
@@ -60,11 +61,11 @@ export function CmsSections({ sections, data, filter = {}, home = false, pageTit
     const hero = type === "hero";
     const stepsPresentation = type === "cards" && (section.presentation === "steps" || (home && section.presentation !== "cards"));
     const familiesPresentation = type === "services" && (!filter.filtre || filter.filtre === "tous") && (section.presentation === "families" || (home && section.presentation !== "catalog"));
-    const coversPresentation = type === "realisations" && home && section.presentation !== "galleries";
+    const coversPresentation = type === "realisations" && section.presentation !== "galleries";
     const slot = section.photoSlotKey ? data.photoSlots.find((slot) => slot.slotKey === section.photoSlotKey) : null;
     const featuredProjectImage = home && hero && !section.mediaAssetId
-      ? data.realisationCategories.find((category) => category.slug === "amenagement-sur-mesure")?.gallery[0]
-        ?? data.realisationCategories.find((category) => category.slug === "renovation-chambre")?.gallery[0]
+      ? data.realisationCategories.find((category) => category.slug === "menuiserie")?.gallery[0]
+        ?? data.realisationCategories.find((category) => category.slug === "renovation-interieure")?.gallery[0]
       : null;
     const heroMediaId = section.mediaAssetId ?? slot?.mediaAssetId ?? featuredProjectImage;
     const visualMedia = heroMediaId && !section.hideImage ? data.media[String(heroMediaId)] : null;
@@ -87,12 +88,12 @@ export function CmsSections({ sections, data, filter = {}, home = false, pageTit
             {section.title ? (hero
               ? section.id === primaryHeroId ? <h1 className="site-hero-title">{section.title}</h1> : <h2 className="site-hero-title">{section.title}</h2>
               : <h2 className="site-section-title">{section.title}</h2>) : type === "services" || type === "realisations"
-                ? <h2 className="sr-only">{type === "services" ? "Nos prestations" : "Nos réalisations"}</h2> : null}
+                ? <h2 className="sr-only">{type === "services" ? "Nos prestations" : "Nos expertises"}</h2> : null}
             {section.body ? <div className={`site-section-body ${hero ? "site-hero-body" : ""}`}>{section.body}</div> : null}
             {hero && home ? (
               <div className="site-hero-actions">
                 {heroCtaUrl && heroCtaLabel ? <Link className="btn-primary" href={heroCtaUrl}>{heroCtaLabel}</Link> : null}
-                {realisationsPage && text("hero_projects", "Découvrir nos réalisations") ? <Link className="site-text-link" href={`/${realisationsPage.slug}`}>{text("hero_projects", "Découvrir nos réalisations")} <span aria-hidden="true">↗</span></Link> : null}
+                {realisationsPage && text("hero_projects", "Découvrir nos expertises") ? <Link className="site-text-link" href={`/${realisationsPage.slug}`}>{text("hero_projects", "Découvrir nos expertises")} <span aria-hidden="true">↗</span></Link> : null}
               </div>
             ) : section.linkLabel && section.linkUrl ? <Link className="btn-primary mt-7" href={section.linkUrl}>{section.linkLabel}</Link> : null}
           </div>
@@ -173,7 +174,7 @@ export function CmsSections({ sections, data, filter = {}, home = false, pageTit
                 return <figure className="site-service-project" key={service.mediaAssetId}>
                   <CategoryGallery settings={data.settings} title={service.name} photos={service.mediaAssetId ? [data.media[String(service.mediaAssetId)]] : []} />
                   <figcaption><span>{service.name}</span>
-                    {project && realisationsPage ? <Link href={`/${realisationsPage.slug}#${project.slug}`} className="site-text-link"
+                    {project ? <Link href={`/services/${project.slug}`} className="site-text-link"
                       aria-label={`${text("project_view", "Voir la réalisation")} : ${project.title}`}>{text("project_view", "Voir la réalisation")} <span aria-hidden="true">↗</span></Link> : null}</figcaption>
                 </figure>;
               })}
@@ -181,16 +182,9 @@ export function CmsSections({ sections, data, filter = {}, home = false, pageTit
           </div> : null}
         </> : null}
 
-        {coversPresentation && realisationsPage ? (
-          <div className="site-section-content site-project-previews">
-            {data.realisationCategories.filter((category) => category.gallery.some((id) => data.media[String(id)])).map((category, index) => {
-              const coverId = category.gallery.find((id) => data.media[String(id)]);
-              return <Link className="site-project-preview" key={category.id} href={`/${realisationsPage.slug}#${category.slug}`}>
-                {coverId ? image(coverId, "site-project-cover") : null}
-                <div><span className="site-card-index">0{index + 1} / Réalisation</span><span aria-hidden="true">↗</span></div>
-                <h3>{category.title}</h3><p>{text("project_discover", "Voir le projet")} · {category.gallery.length} {text("photo_unit", "photo")}{category.gallery.length > 1 ? "s" : ""}</p>
-              </Link>;
-            })}
+        {coversPresentation ? (
+          <div className="site-section-content expertise-grid">
+            {data.realisationCategories.map((category, index) => <ExpertiseCard key={category.id} category={category} index={index} data={data} />)}
           </div>
         ) : type === "realisations" ? <>
           <nav aria-label="Filtrer les réalisations" className="site-section-content site-filter-list">
@@ -237,7 +231,7 @@ export function CmsSections({ sections, data, filter = {}, home = false, pageTit
           : <p role="status" className="text-sm leading-7">{text("form_unavailable", "Le formulaire de devis est momentanément indisponible. Vous pouvez nous joindre directement aux coordonnées indiquées sur le site.")}</p>}</div> : null}
         {type === "contact" ? <div className="site-section-content site-contact-grid">
           <address className="site-contact-details">
-            <p className="site-contact-name">{data.settings.company_name}</p>
+            <p className="site-contact-name">{data.settings.company_legal_name || data.settings.company_name}</p>
             {data.settings.company_address && data.settings.company_address !== "À COMPLÉTER" ? <p>{data.settings.company_address}</p> : null}
             {data.settings.company_hours && data.settings.company_hours !== "À COMPLÉTER" ? <p>{data.settings.company_hours}</p> : null}
             {data.settings.company_phone && data.settings.company_phone !== "À COMPLÉTER" ? <p><a href={`tel:${data.settings.company_phone}`}>{data.settings.company_phone}</a></p> : null}

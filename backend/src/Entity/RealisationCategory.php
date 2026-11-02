@@ -28,6 +28,9 @@ class RealisationCategory
     #[ORM\Column(type: 'text')]
     private string $description = '';
 
+    #[ORM\Column(type: 'text')]
+    private string $summary = '';
+
     #[ORM\ManyToOne]
     #[ORM\JoinColumn(nullable: true, onDelete: 'SET NULL')]
     private ?Service $tagService = null;
@@ -75,6 +78,16 @@ class RealisationCategory
     public function setDescription(string $description): void
     {
         $this->description = $description;
+    }
+
+    public function getSummary(): string
+    {
+        return $this->summary;
+    }
+
+    public function setSummary(string $summary): void
+    {
+        $this->summary = $summary;
     }
 
     public function getTagService(): ?Service

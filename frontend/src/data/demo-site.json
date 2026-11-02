@@ -1,9 +1,10 @@
 {
   "settings": {
     "company_name": "SBC",
+    "company_legal_name": "SARL SBC",
     "company_phone": "À COMPLÉTER",
     "company_email": "À COMPLÉTER",
-    "company_address": "À COMPLÉTER",
+    "company_address": "183-189 avenue de Choisy, 75013 Paris",
     "company_hours": "À COMPLÉTER",
     "company_intervention_area": "Région parisienne",
     "experience_years": "25",
@@ -44,7 +45,7 @@
     "show_hero_proof": "1",
     "show_service_photos": "1",
     "hero_kicker": "Rénovation & aménagement",
-    "hero_projects": "Découvrir nos réalisations",
+    "hero_projects": "Découvrir nos expertises",
     "hero_caption": "Une réalisation {company_name}",
     "hero_photo_label": "Aménagement sur mesure",
     "proof_experience": "{experience_years} ans",
@@ -85,7 +86,7 @@
     "map_notice": "La carte se charge uniquement à votre demande.",
     "map_button": "Afficher la carte",
     "map_title": "Carte de la région parisienne",
-    "map_url": "https://www.openstreetmap.org/export/embed.html?bbox=1.45%2C48.55%2C3.05%2C49.15&layer=mapnik",
+    "map_url": "https://www.openstreetmap.org/export/embed.html?bbox=2.3524%2C48.8265%2C2.3624%2C48.8315&layer=mapnik&marker=48.8290475%2C2.3574614",
     "announcement_news": "Actualité",
     "announcement_offer": "Offre",
     "announcement_job": "Emploi",
@@ -419,98 +420,102 @@
       "sections": [
         {
           "id": "aa143a2b358e6d27",
-          "body": "Des solutions adaptées à chaque projet.",
+          "body": "Sept métiers, une même exigence. Choisissez une expertise pour découvrir notre approche et nos chantiers.",
+          "tone": "default",
           "type": "hero",
           "cards": [],
           "label": "",
-          "title": "Services",
+          "title": "Nos services et expertises",
+          "width": "full",
           "hidden": false,
+          "layout": "auto",
+          "columns": "auto",
           "gallery": [],
           "linkUrl": "",
+          "spacing": "default",
+          "imageFit": "cover",
+          "alignment": "left",
+          "hideImage": false,
           "linkLabel": "",
-          "mediaAssetId": null
-        },
-        {
-          "id": "62c2bd766e18c9d0",
-          "body": "",
-          "type": "services",
-          "cards": [],
-          "label": "",
-          "title": "",
-          "hidden": false,
-          "gallery": [],
-          "linkUrl": "",
-          "linkLabel": "",
-          "mediaAssetId": null
-        },
-        {
-          "id": "cba6da04e5c7745b",
-          "body": "",
-          "type": "faq",
-          "cards": [],
-          "label": "",
-          "title": "Questions fréquentes",
-          "hidden": false,
-          "gallery": [],
-          "linkUrl": "",
-          "linkLabel": "",
-          "mediaAssetId": null
-        }
-      ],
-      "seoDescription": "",
-      "showInNavigation": true,
-      "id": 2,
-      "sortOrder": 1,
-      "isPublished": true
-    },
-    {
-      "slug": "realisations",
-      "title": "Réalisations",
-      "sections": [
-        {
-          "id": "609abd6016fc0b2c",
-          "body": "Salles de bains, chambre et aménagements sur mesure : découvrez notre travail à travers ces espaces réalisés.",
-          "type": "hero",
-          "cards": [],
-          "label": "",
-          "title": "Des espaces transformés",
-          "hidden": false,
-          "gallery": [],
-          "linkUrl": "",
-          "linkLabel": "",
-          "mediaAssetId": null
+          "mediaAssetId": null,
+          "photoSlotKey": "",
+          "presentation": "auto"
         },
         {
           "id": "1da06fa8d02d167c",
           "body": "",
+          "tone": "default",
           "type": "realisations",
           "cards": [],
           "label": "",
           "title": "",
+          "width": "full",
           "hidden": false,
+          "layout": "auto",
+          "columns": "auto",
           "gallery": [],
           "linkUrl": "",
+          "spacing": "default",
+          "imageFit": "cover",
+          "alignment": "left",
+          "hideImage": false,
           "linkLabel": "",
-          "mediaAssetId": null
+          "mediaAssetId": null,
+          "photoSlotKey": "",
+          "presentation": "auto"
         },
         {
-          "id": "6c98f6b2d0d0d221",
-          "body": "Décrivez votre projet, nous revenons vers vous avec une proposition adaptée.",
-          "type": "text",
+          "id": "62c2bd766e18c9d0",
+          "body": "",
+          "tone": "default",
+          "type": "services",
           "cards": [],
           "label": "",
-          "title": "Un projet en tête ?",
+          "title": "Toutes nos prestations",
+          "width": "full",
           "hidden": false,
+          "layout": "auto",
+          "columns": "auto",
           "gallery": [],
-          "linkUrl": "/contact#devis",
-          "linkLabel": "Demander un devis",
-          "mediaAssetId": null
+          "linkUrl": "",
+          "spacing": "default",
+          "imageFit": "cover",
+          "alignment": "left",
+          "hideImage": false,
+          "linkLabel": "",
+          "mediaAssetId": null,
+          "photoSlotKey": "",
+          "presentation": "auto"
+        },
+        {
+          "id": "cba6da04e5c7745b",
+          "body": "",
+          "tone": "default",
+          "type": "faq",
+          "cards": [],
+          "label": "",
+          "title": "Questions fréquentes",
+          "width": "full",
+          "hidden": false,
+          "layout": "auto",
+          "columns": "auto",
+          "gallery": [],
+          "linkUrl": "",
+          "spacing": "default",
+          "imageFit": "cover",
+          "alignment": "left",
+          "hideImage": false,
+          "linkLabel": "",
+          "mediaAssetId": null,
+          "photoSlotKey": "",
+          "presentation": "auto"
         }
       ],
-      "seoDescription": "",
+      "showInFooter": false,
+      "seoDescription": "Rénovation générale, intérieure, peinture, menuiserie, parquet, électricité et plomberie : découvrez les services et expertises de SBC.",
       "showInNavigation": true,
-      "id": 3,
-      "sortOrder": 2,
+      "id": 2,
+      "sortOrder": 1,
       "isPublished": true
     },
     {
@@ -694,7 +699,7 @@
         },
         {
           "id": "legal-editor",
-          "body": "Le site présente les activités de {company_name}. Dénomination sociale complète, forme juridique, capital social, siège social, numéro SIREN/SIRET, immatriculation au RCS ou au RNE et numéro de TVA intracommunautaire, le cas échéant : à compléter par SBC. Coordonnées de l’entreprise : {company_address} ; e-mail : {company_email} ; téléphone : {company_phone}.",
+          "body": "Le site est édité par {company_legal_name}, société à responsabilité limitée dont le siège social est situé {company_address}. Capital social, numéro SIREN/SIRET, immatriculation au RCS de Paris et numéro de TVA intracommunautaire : à compléter. Pour toute question, utilisez la page Contact.",
           "tone": "default",
           "type": "text",
           "cards": [],
@@ -877,7 +882,7 @@
           "presentation": "auto"
         }
       ],
-      "showInFooter": false,
+      "showInFooter": true,
       "seoDescription": "",
       "showInNavigation": false,
       "id": 7,
@@ -1074,10 +1079,82 @@
   ],
   "realisationCategories": [
     {
+      "id": 18,
+      "title": "Rénovation générale",
+      "slug": "renovation-generale",
+      "summary": "Une rénovation complète de maison ou d’appartement, coordonnée par un seul interlocuteur, du diagnostic aux finitions.",
+      "description": "La rénovation générale regroupe l’ensemble des travaux nécessaires pour remettre à neuf un logement, qu’il s’agisse d’un appartement ancien, d’une maison à moderniser ou d’un bien à réorganiser avant emménagement.\n\nNous prenons en charge la coordination des différents corps de métier : vous n’avez qu’un seul interlocuteur, un planning clair et un suivi régulier du chantier.\n\n## Ce que nous réalisons\n- Démolition, dépose et préparation des supports\n- Création ou déplacement de cloisons, doublage et isolation\n- Reprise de l’électricité et de la plomberie\n- Pose de sols, de carrelage et de revêtements\n- Peinture, menuiseries intérieures et finitions\n- Aménagement de cuisine et de salle de bains\n\n## Notre façon de travailler\nChaque projet commence par une visite et l’écoute de vos besoins, puis par un devis détaillé. Nous organisons ensuite les interventions dans le bon ordre, contrôlons chaque étape et vous accompagnons jusqu’à la réception des travaux.",
+      "serviceId": null,
+      "serviceGroup": null,
+      "serviceName": null,
+      "gallery": []
+    },
+    {
+      "id": 2,
+      "title": "Rénovation intérieure et aménagement",
+      "slug": "renovation-interieure",
+      "summary": "Repenser, optimiser et moderniser vos pièces de vie sans toucher à la structure du bâtiment.",
+      "description": "La rénovation intérieure permet de repenser les volumes, la circulation et l’ambiance de chaque pièce. Chambre, séjour, entrée, bureau : nous adaptons l’espace à votre façon de vivre.\n\nNous intervenons pièce par pièce ou sur l’ensemble du logement, avec des finitions soignées et des matériaux choisis avec vous.\n\n## Ce que nous réalisons\n- Réaménagement et optimisation des espaces\n- Rénovation de chambres, séjours et pièces à vivre\n- Rangements, dressings et mobilier intégré\n- Revêtements de sols et de murs\n- Éclairage et ambiance décorative\n\n## Notre façon de travailler\nNous partons de l’usage de la pièce, de sa lumière et de vos contraintes pour proposer des solutions durables et agréables à vivre, dans le respect du budget et des délais annoncés.",
+      "serviceId": 68,
+      "serviceGroup": "interieur",
+      "serviceName": "Peinture",
+      "gallery": [
+        6
+      ]
+    },
+    {
+      "id": 19,
+      "title": "Peinture et finitions",
+      "slug": "peinture-finitions",
+      "summary": "Préparation des supports, peintures, enduits et revêtements muraux pour un rendu net et durable.",
+      "description": "La peinture et les finitions donnent le caractère final d’une rénovation. Un beau résultat dépend autant de la préparation des supports que du choix des teintes.\n\nNous réalisons des travaux soignés, dans des logements vides comme occupés, en protégeant soigneusement les sols et le mobilier.\n\n## Ce que nous réalisons\n- Rebouchage, ponçage et enduit des murs et plafonds\n- Peinture intérieure, murs, plafonds et boiseries\n- Peinture décorative, aplats et effets de couleur\n- Pose de papier peint et de revêtements muraux\n- Reprise de fissures et remise en état avant peinture\n\n## Notre façon de travailler\nNous vous conseillons sur les teintes, les finis et les produits adaptés à chaque pièce, puis nous veillons à la propreté du chantier jusqu’aux dernières retouches.",
+      "serviceId": null,
+      "serviceGroup": null,
+      "serviceName": null,
+      "gallery": []
+    },
+    {
+      "id": 3,
+      "title": "Menuiserie",
+      "slug": "menuiserie",
+      "summary": "Portes, rangements et mobilier sur mesure : des menuiseries intégrées qui optimisent chaque espace.",
+      "description": "La menuiserie améliore à la fois le confort, l’esthétique et l’usage d’un logement. Placards, bibliothèques, têtes de lit, bureaux intégrés ou portes : chaque réalisation est dessinée pour son emplacement.\n\nLe sur-mesure permet d’exploiter les recoins, de gagner du rangement et d’obtenir des finitions parfaitement ajustées.\n\n## Ce que nous réalisons\n- Rangements, placards et dressings sur mesure\n- Bibliothèques et bureaux intégrés\n- Meubles de salle de bains et agencements\n- Habillages muraux et têtes de lit\n- Pose et remplacement de portes intérieures\n- Fenêtres et menuiseries extérieures\n\n## Notre façon de travailler\nNous relevons les dimensions, étudions les contraintes et vous proposons un agencement adapté, puis nous fabriquons ou posons les éléments avec précision.",
+      "serviceId": 77,
+      "serviceGroup": "projet_global",
+      "serviceName": "Aménagement et agrandissement",
+      "gallery": [
+        8,
+        7
+      ]
+    },
+    {
+      "id": 20,
+      "title": "Parquet",
+      "slug": "parquet",
+      "summary": "Fourniture et pose de parquets, rénovation et finitions pour des sols chaleureux et durables.",
+      "description": "Le parquet apporte chaleur et caractère à une pièce. Neuf ou ancien, il demande un support préparé avec soin et une pose adaptée à l’usage du logement.\n\nNous vous aidons à choisir le revêtement en fonction de la pièce, de l’exposition et de l’entretien souhaité.\n\n## Ce que nous réalisons\n- Pose de parquet massif, contrecollé ou stratifié\n- Préparation et ragréage des supports\n- Plinthes et finitions de rives\n- Rénovation de parquets existants\n- Raccords de seuils et transitions entre pièces\n\n## Notre façon de travailler\nLe sol est contrôlé avant la pose, les produits sont choisis avec vous et la mise en œuvre respecte les temps de séchage et d’adaptation du matériau.",
+      "serviceId": null,
+      "serviceGroup": null,
+      "serviceName": null,
+      "gallery": []
+    },
+    {
+      "id": 21,
+      "title": "Électricité",
+      "slug": "electricite",
+      "summary": "Installation, rénovation et mise en conformité électrique pour un logement sûr et confortable.",
+      "description": "Une installation électrique sûre et adaptée aux usages actuels est indispensable dans un logement rénové. Nous intervenons aussi bien sur une réfection complète que sur des travaux ciblés.\n\n## Ce que nous réalisons\n- Remplacement ou création de tableaux électriques\n- Mise en conformité et sécurisation de l’installation\n- Prises, interrupteurs et circuits dédiés\n- Éclairage intérieur et extérieur\n- Préparation de la domotique et des réseaux de communication\n\n## Notre façon de travailler\nNous étudions vos besoins pièce par pièce, planifions les passages de câbles avant les finitions et vérifions l’installation avant remise du chantier.",
+      "serviceId": null,
+      "serviceGroup": null,
+      "serviceName": null,
+      "gallery": []
+    },
+    {
       "id": 1,
-      "title": "Rénovation salle de bains",
-      "slug": "renovation-salle-de-bains",
-      "description": "Rénovation complète de salle de bains avec douche vitrée, carrelage contemporain et finitions soignées.",
+      "title": "Plomberie et sanitaires",
+      "slug": "plomberie-sanitaires",
+      "summary": "Plomberie, salles de bains et sanitaires : création, rénovation et remplacement d’équipements.",
+      "description": "La plomberie et les sanitaires touchent au confort du quotidien. Qu’il s’agisse de rénover une salle de bains complète ou de remplacer un équipement, nous soignons l’étanchéité, l’évacuation et les finitions.\n\n## Ce que nous réalisons\n- Rénovation complète de salles de bains\n- Douches à l’italienne, baignoires et receveurs\n- Meubles vasques, robinetterie et sèche-serviettes\n- WC, lave-mains et sanitaires suspendus\n- Reprise d’alimentations et d’évacuations\n- Carrelage, faïence et étanchéité\n\n## Notre façon de travailler\nNous définissons avec vous l’implantation, les matériaux et les équipements, puis nous coordonnons les interventions pour limiter la durée du chantier.",
       "serviceId": 67,
       "serviceGroup": "interieur",
       "serviceName": "Salle de bain",
@@ -1087,37 +1164,12 @@
         4,
         5
       ]
-    },
-    {
-      "id": 2,
-      "title": "Rénovation chambre",
-      "slug": "renovation-chambre",
-      "description": "Rénovation d’une chambre avec peinture bleu profond, parquet chaleureux et finitions soignées.",
-      "serviceId": 68,
-      "serviceGroup": "interieur",
-      "serviceName": "Peinture",
-      "gallery": [
-        6
-      ]
-    },
-    {
-      "id": 3,
-      "title": "Aménagement sur mesure",
-      "slug": "amenagement-sur-mesure",
-      "description": "Du séjour à l’espace nuit, des rangements et du mobilier intégrés pour optimiser chaque espace.",
-      "serviceId": 77,
-      "serviceGroup": "projet_global",
-      "serviceName": "Aménagement et agrandissement",
-      "gallery": [
-        8,
-        7
-      ]
     }
   ],
   "media": {
     "2": {
       "id": 2,
-      "version": "5d884f692b50",
+      "version": "95c7d92ec26f",
       "alt": "Salle de bains, douche vitrée et meuble vasque",
       "width": 517,
       "height": 690,
@@ -1127,7 +1179,7 @@
     },
     "3": {
       "id": 3,
-      "version": "26bcd0e83bdc",
+      "version": "10838cade00e",
       "alt": "Salle de bains, douche et sèche-serviettes",
       "width": 562,
       "height": 750,
@@ -1137,7 +1189,7 @@
     },
     "4": {
       "id": 4,
-      "version": "5aed36403659",
+      "version": "5156117b4585",
       "alt": "Salle de bains, double vasque et douche à l’italienne",
       "width": 693,
       "height": 804,
@@ -1147,7 +1199,7 @@
     },
     "5": {
       "id": 5,
-      "version": "3aae34f1934a",
+      "version": "1c922ecd1a6b",
       "alt": "Salle de bains, carrelage sombre et miroirs lumineux",
       "width": 608,
       "height": 811,
@@ -1157,7 +1209,7 @@
     },
     "6": {
       "id": 6,
-      "version": "8cc4cefa4d1a",
+      "version": "f4bf909214db",
       "alt": "Chambre rénovée, mur bleu, parquet et commode en bois",
       "width": 649,
       "height": 788,
@@ -1167,20 +1219,20 @@
     },
     "7": {
       "id": 7,
-      "version": "f9caa0b67e83",
+      "version": "6a99705ebb4b",
       "alt": "Espace nuit avec mobilier et rangements intégrés sur mesure",
       "width": 501,
-      "height": 502,
+      "height": 446,
       "focalPoint": null,
       "variants": [],
       "demoPath": "/demo/media/7.jpg"
     },
     "8": {
       "id": 8,
-      "version": "5fb2c175f491",
+      "version": "8348b743544b",
       "alt": "Séjour avec bibliothèque et rangements intégrés sur mesure",
       "width": 457,
-      "height": 470,
+      "height": 418,
       "focalPoint": null,
       "variants": [],
       "demoPath": "/demo/media/8.jpg"
@@ -1267,7 +1319,7 @@
     {
       "slotKey": "PH-ACCUEIL-HERO",
       "ratio": "1:1",
-      "minimumSize": "457x470, source fournie",
+      "minimumSize": "457x418, source fournie",
       "idealDescription": "Aménagement sur mesure, bibliothèque et rangements intégrés dans un séjour",
       "mediaAssetId": 8
     },

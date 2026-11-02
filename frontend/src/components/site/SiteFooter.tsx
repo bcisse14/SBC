@@ -3,7 +3,7 @@ import { siteText, type SiteSettings } from "@/lib/site-customization";
 
 export function SiteFooter({ company, navItems, legalItems, titles, settings = {} }: {
   settings?: SiteSettings;
-  company: { name: string; phone?: string | null; email?: string | null; area?: string | null };
+  company: { name: string; phone?: string | null; email?: string | null; area?: string | null; address?: string | null; legalName?: string | null };
   navItems: Array<{ href: string; label: string }>;
   legalItems: Array<{ href: string; label: string }>;
   titles: { contact: string; pages: string; legal: string };
@@ -15,6 +15,13 @@ export function SiteFooter({ company, navItems, legalItems, titles, settings = {
           <div className="site-footer-contact">
             <p className="site-footer-kicker">{siteText(settings, "footer_kicker", "Parlons de votre projet")}</p>
             <h2>{titles.contact}</h2>
+            {company.address && company.address !== "À COMPLÉTER" ? (
+              <address>
+                {company.legalName ? <strong>{company.legalName}</strong> : null}
+                {company.legalName ? <br /> : null}
+                {company.address}
+              </address>
+            ) : null}
             {company.phone && company.phone !== "À COMPLÉTER" ? <a href={`tel:${company.phone}`}>{company.phone}</a> : null}
             {company.email && company.email !== "À COMPLÉTER" ? <a href={`mailto:${company.email}`}>{company.email}</a> : null}
             <p>{company.area ?? "Région parisienne"}</p>

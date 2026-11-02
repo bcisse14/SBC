@@ -20,9 +20,9 @@ $assert = static function (bool $condition, string $message) use (&$checks): voi
     ++$checks;
 };
 $assignments = [
-    'renovation-salle-de-bains' => ['sdb-01.jpeg', 'sdb-02.jpeg', 'sdb-03.jpeg', 'sdb-04.jpeg'],
-    'renovation-chambre' => ['chambre-01.jpeg'],
-    'amenagement-sur-mesure' => ['amenagement-01.jpg', 'amenagement-02.jpg'],
+    'plomberie-sanitaires' => ['sdb-01.jpeg', 'sdb-02.jpeg', 'sdb-03.jpeg', 'sdb-04.jpeg'],
+    'renovation-interieure' => ['chambre-01.jpeg'],
+    'menuiserie' => ['amenagement-01.jpg', 'amenagement-02.jpg'],
 ];
 $seen = [];
 foreach ($assignments as $slug => $names) {

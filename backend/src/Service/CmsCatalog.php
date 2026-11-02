@@ -63,7 +63,8 @@ class CmsCatalog
                 'mediaAssetId' => $image,
             ]],
             'realisations' => ['label' => 'Réalisations', 'class' => RealisationCategory::class, 'fields' => [
-                'title' => $title, 'description' => $field('Description', 'textarea'),
+                'title' => $title, 'summary' => $field('Résumé affiché sur la carte', 'textarea', false, ['max' => 320]),
+                'description' => $field('Texte de la page de détail (lignes commençant par « - » pour les listes, « ## » pour un intertitre)', 'textarea'),
                 'serviceId' => $field('Service associé', 'service'),
                 'gallery' => $field('Galerie (la première photo sert de couverture)', 'gallery'),
             ]],

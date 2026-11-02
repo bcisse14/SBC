@@ -32,7 +32,7 @@ class ComposeLegalPageCommand extends Command
             return Command::FAILURE;
         }
         $this->em->wrapInTransaction(function () use ($page): void {
-            $this->catalog->apply('pages', $page, ['sections' => LegalPageContent::sections()]);
+            $this->catalog->apply('pages', $page, ['sections' => LegalPageContent::sections(), 'showInFooter' => true]);
             $marker = new Setting();
             $marker->setSettingKey('_legal_karlsefni_v1');
             $marker->setSettingValue('1');

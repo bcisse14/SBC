@@ -17,7 +17,7 @@ export function SiteFrame({ data, children }: { data: SiteBootstrap; children: R
     {data.settings.show_header !== "0" ? <SiteHeader settings={data.settings} topAnnouncement={data.settings.announcement_top} navItems={navItems} companyName={companyName} ctaLabel={ctaLabel} ctaUrl={ctaUrl} /> : null}
     {children}
     {data.settings.show_footer !== "0" ? <SiteFooter settings={data.settings}
-      company={{ phone: data.settings.company_phone, email: data.settings.company_email, area: data.settings.company_intervention_area, name: companyName }}
+      company={{ phone: data.settings.company_phone, email: data.settings.company_email, area: data.settings.company_intervention_area, address: data.settings.company_address, legalName: data.settings.company_legal_name, name: companyName }}
       navItems={navItems} legalItems={legalItems}
       titles={{ contact: data.settings.footer_contact_title ?? "Coordonnées", pages: data.settings.footer_pages_title ?? "Pages", legal: data.settings.footer_legal_title ?? "Informations" }}
     /> : null}

@@ -27,7 +27,8 @@ class AppFixtures extends Fixture
             'company_name' => 'SBC',
             'company_phone' => 'À COMPLÉTER',
             'company_email' => 'À COMPLÉTER',
-            'company_address' => 'À COMPLÉTER',
+            'company_address' => '183-189 avenue de Choisy, 75013 Paris',
+            'company_legal_name' => 'SARL SBC',
             'company_hours' => 'À COMPLÉTER',
             'company_intervention_area' => 'Région parisienne',
             'slogan_primary' => 'Avec SBC, vos projets se réalisent avec style et fiabilité',
@@ -122,7 +123,7 @@ class AppFixtures extends Fixture
         }
 
         $slots = [
-            ['PH-ACCUEIL-HERO', '1:1', '457x470, source fournie', 'Aménagement sur mesure, bibliothèque et rangements intégrés dans un séjour'],
+            ['PH-ACCUEIL-HERO', '1:1', '457x418, source fournie', 'Aménagement sur mesure, bibliothèque et rangements intégrés dans un séjour'],
             ['PH-ACCUEIL-INTERIEUR', '4:5', 'min 1600x2000', 'Détail intérieur avec matériaux soignés'],
             ['PH-ACCUEIL-EXTERIEUR', '4:5', 'min 1600x2000', 'Façade rénovée ou terrasse aménagée'],
             ['PH-ACCUEIL-METIER-01', '1:1', 'min 1400x1400', 'Mise en peinture nette, outil en action'],

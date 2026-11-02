@@ -79,7 +79,7 @@ class SyncProjectPhotosCommand extends Command
             foreach ($assignments as $slug => $names) {
                 $category = $this->em->getRepository(RealisationCategory::class)->findOneBy(['slug' => $slug]);
                 if (!$category) {
-                    throw new \RuntimeException('Catégorie manquante : ' . $slug . '. Initialisez les réalisations avant la synchronisation.');
+                    continue;
                 }
                 $extraIds = array_values(array_diff($category->getGallery(), $knownIds));
                 $category->setGallery([...array_map(static fn (string $name) => $assets[$name]->getId(), $names), ...$extraIds]);
@@ -106,7 +106,7 @@ class SyncProjectPhotosCommand extends Command
             if ($hero) {
                 $hero->setMediaAssetId($assets['amenagement-01.jpg']->getId());
                 $hero->setRatio('1:1');
-                $hero->setMinimumSize('457x470, source fournie');
+                $hero->setMinimumSize('457x418, source fournie');
                 $hero->setIdealDescription('Aménagement sur mesure, bibliothèque et rangements intégrés dans un séjour');
             }
 

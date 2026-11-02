@@ -229,3 +229,268 @@
     min-height: 0;
   }
 }
+
+/* Expertises : cartes et pages de détail */
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.expertise-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--beton);
+  border-radius: var(--site-radius, 12px);
+  background: var(--papier);
+  transition: border-color 180ms ease, transform 180ms ease;
+}
+
+.expertise-card:hover,
+.expertise-card:focus-visible {
+  border-color: var(--terre-cuite);
+  transform: translateY(-3px);
+}
+
+.expertise-card-media {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--platre);
+}
+
+.expertise-card-media picture {
+  display: block;
+  height: 100%;
+}
+
+.expertise-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 400ms ease;
+}
+
+.expertise-card:hover .expertise-card-image {
+  transform: scale(1.03);
+}
+
+.expertise-card-copy {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 1.25rem 1.35rem 1.4rem;
+}
+
+.expertise-card-copy h3 {
+  font: 1.7rem/1.12 "Instrument Serif", serif;
+}
+
+.expertise-card-copy > p {
+  color: #5b645a;
+  font-size: 0.88rem;
+  line-height: 1.65;
+}
+
+.expertise-card-link {
+  display: inline-flex;
+  gap: 0.5rem;
+  margin-top: auto;
+  padding-top: 0.6rem;
+  color: var(--terre-cuite-fonce);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.photo-placeholder {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  min-height: 11rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1.25rem;
+  border: 1.5px dashed #9aa597;
+  background: repeating-linear-gradient(135deg, transparent 0 14px, rgb(66 91 70 / 6%) 14px 15px);
+  color: #55705a;
+  text-align: center;
+}
+
+.photo-placeholder strong {
+  font: 500 0.78rem "DM Mono", monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.photo-placeholder span {
+  color: #697368;
+  font-size: 0.8rem;
+}
+
+.expertise-hero {
+  padding-block: clamp(2.5rem, 6vw, 5rem) clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.expertise-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 1.8rem;
+  color: #697368;
+  font-size: 0.82rem;
+}
+
+.expertise-breadcrumb a {
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+}
+
+.expertise-lead {
+  max-width: 40rem;
+  margin-top: 1.4rem;
+  color: #5b645a;
+  font-size: 1.1rem;
+  line-height: 1.75;
+}
+
+.expertise-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(260px, 0.8fr);
+  align-items: start;
+  gap: clamp(2rem, 5vw, 4.5rem);
+  padding-block: clamp(1.5rem, 4vw, 3rem);
+}
+
+.expertise-prose {
+  max-width: 44rem;
+}
+
+.expertise-prose p {
+  margin-top: 1.1rem;
+  color: #4a554b;
+  line-height: 1.85;
+}
+
+.expertise-prose h2 {
+  margin-top: 2.4rem;
+  font: 2rem/1.15 "Instrument Serif", serif;
+}
+
+.expertise-prose ul {
+  display: grid;
+  gap: 0.6rem;
+  margin-top: 1.2rem;
+  padding: 0;
+  list-style: none;
+}
+
+.expertise-prose li {
+  position: relative;
+  padding-left: 1.5rem;
+  color: #4a554b;
+  line-height: 1.65;
+}
+
+.expertise-prose li::before {
+  position: absolute;
+  top: 0.65em;
+  left: 0;
+  width: 0.7rem;
+  height: 1px;
+  background: var(--terre-cuite);
+  content: "";
+}
+
+.expertise-aside {
+  position: sticky;
+  top: 6.5rem;
+  display: grid;
+  gap: 1rem;
+  padding: 1.75rem;
+  border: 1px solid var(--beton);
+  border-radius: var(--site-radius, 12px);
+  background: var(--platre);
+}
+
+.expertise-aside h2 {
+  font: 1.9rem/1.15 "Instrument Serif", serif;
+}
+
+.expertise-aside p:not(.site-card-index) {
+  color: #5b645a;
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+.expertise-aside .btn-primary {
+  justify-self: start;
+}
+
+.expertise-gallery {
+  padding-block: clamp(2rem, 5vw, 4rem);
+}
+
+.expertise-gallery .project-gallery,
+.expertise-placeholders {
+  margin-top: 2rem;
+}
+
+.expertise-placeholders {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.expertise-placeholders .photo-placeholder {
+  aspect-ratio: 4 / 3;
+  border-radius: var(--site-radius, 12px);
+}
+
+.expertise-others {
+  padding-block: clamp(1.5rem, 4vw, 3rem) clamp(3rem, 7vw, 6rem);
+}
+
+.expertise-others ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  padding: 0;
+  list-style: none;
+}
+
+.expertise-others a {
+  display: inline-flex;
+  gap: 0.6rem;
+  padding: 0.7rem 1.1rem;
+  border: 1px solid var(--beton);
+  border-radius: 999px;
+  font-size: 0.9rem;
+}
+
+.expertise-others a:hover,
+.expertise-others a:focus-visible {
+  border-color: var(--terre-cuite);
+  color: var(--terre-cuite-fonce);
+}
+
+@media (max-width: 900px) {
+  .expertise-body {
+    grid-template-columns: 1fr;
+  }
+
+  .expertise-aside {
+    position: static;
+  }
+}
+
+@media (max-width: 639px) {
+  .expertise-grid,
+  .expertise-placeholders {
+    grid-template-columns: 1fr;
+  }
+}

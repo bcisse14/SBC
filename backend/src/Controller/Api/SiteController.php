@@ -63,6 +63,7 @@ class SiteController extends AbstractController
                 'id' => $category->getId(),
                 'title' => $category->getTitle(),
                 'slug' => $category->getSlug(),
+                'summary' => $category->getSummary(),
                 'description' => $category->getDescription(),
                 'serviceId' => $category->getTagService()?->getId(),
                 'serviceGroup' => $category->getTagService()?->getServiceGroup(),

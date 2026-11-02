@@ -6,6 +6,9 @@ namespace App\Service;
 
 final class LegalPageContent
 {
+    public const EDITOR_BODY = 'Le site est édité par {company_legal_name}, société à responsabilité limitée dont le siège social est situé {company_address}. Capital social, numéro SIREN/SIRET, immatriculation au RCS de Paris et numéro de TVA intracommunautaire : à compléter. Pour toute question, utilisez la page Contact.';
+    public const PREVIOUS_EDITOR_BODY = 'Le site présente les activités de {company_name}. Dénomination sociale complète, forme juridique, capital social, siège social, numéro SIREN/SIRET, immatriculation au RCS ou au RNE et numéro de TVA intracommunautaire, le cas échéant : à compléter par SBC. Coordonnées de l’entreprise : {company_address} ; e-mail : {company_email} ; téléphone : {company_phone}.';
+
     public static function sections(): array
     {
         $text = static fn (string $id, string $title, string $body, array $extra = []) => [
@@ -15,8 +18,7 @@ final class LegalPageContent
 
         return [
             ['id' => 'legal-hero', 'type' => 'hero', 'title' => 'Mentions légales', 'body' => '', 'hidden' => false],
-            $text('legal-editor', 'Éditeur du site',
-                'Le site présente les activités de {company_name}. Dénomination sociale complète, forme juridique, capital social, siège social, numéro SIREN/SIRET, immatriculation au RCS ou au RNE et numéro de TVA intracommunautaire, le cas échéant : à compléter par SBC. Coordonnées de l’entreprise : {company_address} ; e-mail : {company_email} ; téléphone : {company_phone}.'),
+            $text('legal-editor', 'Éditeur du site', self::EDITOR_BODY),
             $text('legal-publication', 'Responsable de la publication',
                 'Le responsable de la publication est le représentant légal de SBC. Nom et prénom : à compléter. Karlsefni intervient comme créateur technique du site et n’est pas désigné, à ce titre, comme éditeur ou responsable de la publication.'),
             $text('legal-creator', 'Conception et réalisation',

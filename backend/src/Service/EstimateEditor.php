@@ -29,8 +29,9 @@ class EstimateEditor
         $company = $this->em->getRepository(EstimateProfile::class)->findOneBy(['kind' => 'company'], ['updatedAt' => 'DESC', 'id' => 'DESC']);
         $settings = $this->siteEditor->values();
         $defaults = [];
-        foreach (['name' => 'company_name', 'address' => 'company_address', 'email' => 'company_email', 'phone' => 'company_phone'] as $key => $setting) {
+        foreach (['name' => 'company_legal_name', 'address' => 'company_address', 'email' => 'company_email', 'phone' => 'company_phone'] as $key => $setting) {
             $value = $settings[$setting] ?? '';
+            if ($setting === 'company_legal_name' && $value === '') $value = $settings['company_name'] ?? '';
             $defaults[$key] = $value === 'À COMPLÉTER' ? '' : $value;
         }
         return [

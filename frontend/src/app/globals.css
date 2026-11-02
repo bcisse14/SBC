@@ -1327,12 +1327,23 @@ html {
 }
 
 .site-footer-contact > a,
+.site-footer-contact > address,
 .site-footer-contact > p:not(.site-footer-kicker) {
   display: block;
   width: fit-content;
   margin-top: 0.55rem;
   color: #c4bfb4;
   font-size: 0.88rem;
+}
+
+.site-footer-contact > address {
+  font-style: normal;
+  line-height: 1.5;
+}
+
+.site-footer-contact > address strong {
+  color: #fff;
+  font-weight: 600;
 }
 
 .site-footer-contact > a:hover,
