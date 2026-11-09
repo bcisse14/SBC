@@ -100,6 +100,7 @@ class MediaStorage
 
         $original = clone $image;
         $original->setImageFormat($extension);
+        $original->setImageCompressionQuality(95);
         $original->writeImage($destination);
         $original->clear();
 
@@ -131,7 +132,7 @@ class MediaStorage
                     $copy->resizeImage($w, 0, \Imagick::FILTER_LANCZOS, 1);
                 }
                 $copy->setImageFormat($format);
-                $copy->setImageCompressionQuality($format === 'avif' ? 55 : 82);
+                $copy->setImageCompressionQuality($format === 'avif' ? 60 : 92);
                 $file = sprintf('%s-%d.%s', $base, $w, $format);
                 try {
                     $copy->writeImage($directory . '/' . $file);

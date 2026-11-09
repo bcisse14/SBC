@@ -8,6 +8,7 @@ import { MapReveal } from "@/components/site/MapReveal";
 import { siteText } from "@/lib/site-customization";
 import { PartnerCarousels } from "@/components/site/PartnerCarousels";
 import { ExpertiseCard } from "@/components/site/Expertise";
+import { LightboxImage } from "@/components/site/LightboxImage";
 
 const announcementTypes = { news: "Actualité", offer: "Offre", job: "Emploi", information: "Information" };
 const defaultServiceFamilies = [
@@ -98,7 +99,8 @@ export function CmsSections({ sections, data, filter = {}, home = false, pageTit
             ) : section.linkLabel && section.linkUrl ? <Link className="btn-primary mt-7" href={section.linkUrl}>{section.linkLabel}</Link> : null}
           </div>
           {(hero || type === "text") && visualMedia ? <div className={hero ? "site-hero-visual" : "site-feature-visual"}>
-              <ResponsiveImage media={visualMedia} sizes="(min-width: 1024px) 48vw, 100vw" priority={hero && home} className={hero ? "site-hero-photo" : "w-full object-cover"} />
+              {hero && home ? <LightboxImage media={visualMedia} sizes="(min-width: 1024px) 48vw, 100vw" alt={visualMedia.alt} className="site-hero-photo" />
+                : <ResponsiveImage media={visualMedia} sizes="(min-width: 1024px) 48vw, 100vw" priority={hero && home} className={hero ? "site-hero-photo" : "w-full object-cover"} />}
               {hero && home ? <div className="site-hero-caption"><span>{text("hero_caption", "Une réalisation {company_name}")}</span><span>{text("hero_photo_label", "Aménagement sur mesure")}</span></div> : null}
             </div> : null}
         </div>

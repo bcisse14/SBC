@@ -56,8 +56,10 @@ function PartnerCarousel({ category, items, media, paused, delay }: {
       <div className="site-partner-track" style={{ transform: `translateX(-${activeIndex * 100}%)` }}>
         {items.map((item, slideIndex) => {
           const logo = item.logoMediaId ? media[String(item.logoMediaId)] : null;
-          const content = <>{logo ? <ResponsiveImage media={logo} alt={item.name} sizes="(min-width: 1024px) 220px, 50vw" className="site-partner-logo" />
-            : <><span className="site-partner-placeholder" aria-hidden="true"><svg viewBox="0 0 40 32" fill="none"><rect x="1" y="1" width="38" height="30" rx="4" /><circle cx="28" cy="10" r="3" /><path d="m3 27 10-12 9 9 5-5 10 9" /></svg></span><span className="site-partner-name">{item.name}</span></>}</>;
+          const content = <>{logo
+            ? <ResponsiveImage media={logo} alt={item.name} sizes="(min-width: 1024px) 220px, 50vw" className="site-partner-logo" />
+            : <span className="site-partner-placeholder" aria-hidden="true"><svg viewBox="0 0 40 32" fill="none"><rect x="1" y="1" width="38" height="30" rx="4" /><circle cx="28" cy="10" r="3" /><path d="m3 27 10-12 9 9 5-5 10 9" /></svg></span>}
+            <span className="site-partner-name">{item.name}</span></>;
           return <div key={slideIndex} className="site-partner-slide" role="group" aria-roledescription="diapositive"
             aria-label={`${slideIndex + 1} sur ${items.length}`} aria-hidden={slideIndex !== activeIndex} inert={slideIndex !== activeIndex}>
             {item.websiteUrl ? <a href={item.websiteUrl}>{content}</a> : <div>{content}</div>}

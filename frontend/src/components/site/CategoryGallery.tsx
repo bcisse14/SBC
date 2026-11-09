@@ -46,7 +46,7 @@ export function CategoryGallery({ title, photos, settings = {} }: { title: strin
                 setOpenIndex(index);
               }}
             >
-              <ResponsiveImage media={photo} sizes="(min-width: 1024px) 300px, (min-width: 640px) 45vw, 80vw" className="project-gallery-image" />
+              <ResponsiveImage media={photo} sizes="(min-width: 1024px) 75vw, 100vw" className="project-gallery-image" />
               <span className="project-gallery-zoom" aria-hidden="true">{siteText(settings, "gallery_zoom", "Agrandir")} ↗</span>
             </button>
           </li>

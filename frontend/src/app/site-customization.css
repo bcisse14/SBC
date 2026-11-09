@@ -119,10 +119,11 @@
 .site-partner-window { overflow: hidden; }
 .site-partner-track { display: flex; transition: transform 650ms cubic-bezier(.22, 1, .36, 1); }
 .site-partner-slide { flex: 0 0 100%; min-width: 0; }
-.site-partner-slide > :is(a, div) { display: flex; min-height: 100px; flex-direction: column; align-items: center; justify-content: center; gap: .6rem; }
+.site-partner-slide > :is(a, div) { display: flex; min-height: 150px; flex-direction: column; align-items: center; justify-content: center; gap: .75rem; padding: .75rem 1rem; text-align: center; }
 .site-partner-slide a:focus-visible { outline: 2px solid var(--encre); outline-offset: -3px; border-radius: 4px; }
-.site-partner-slide picture { display: block; width: 100%; }
-.site-partner-logo { width: 100%; height: 100px; object-fit: contain; }
+.site-partner-slide picture { display: flex; width: min(100%, 220px); height: 92px; align-items: center; justify-content: center; background: #fff; border-radius: 4px; }
+.site-partner-logo { display: block; width: 100%; height: 100%; object-fit: contain; padding: .5rem; }
+.site-partner-name { color: var(--encre); font-size: .78rem; font-weight: 600; letter-spacing: .04em; line-height: 1.25; }
 .site-partner-placeholder { display: block; width: 34px; color: var(--terre-cuite); opacity: .55; }
 .site-partner-placeholder svg { width: 100%; stroke: currentColor; stroke-width: 1.2; }
 .site-partner-name { font-size: .95rem; overflow-wrap: anywhere; }

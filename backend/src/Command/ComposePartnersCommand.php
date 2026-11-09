@@ -22,7 +22,7 @@ class ComposePartnersCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        if ($this->em->getRepository(Setting::class)->findOneBy(['settingKey' => '_home_partners_v1'])) {
+        if ($this->em->getRepository(Setting::class)->findOneBy(['settingKey' => '_home_partners_v2'])) {
             $output->writeln('Partenaires déjà intégrés. Les modifications du Studio sont conservées.');
             return Command::SUCCESS;
         }
@@ -43,20 +43,34 @@ class ComposePartnersCommand extends Command
             $this->catalog->apply('pages', $home, ['sections' => $sections]);
             $page = $this->em->getRepository(CmsDocument::class)->findOneBy(['resource' => 'pages', 'slug' => 'partenaires']);
             if ($page) $this->em->remove($page);
-            if ($this->em->getRepository(Partner::class)->count([]) === 0) {
-                foreach (['Peinture', 'Plâtrerie, cloisons, isolation', 'Salles de bains / sanitaires', 'Électricité et domotique'] as $group => $category) {
-                    foreach (['Lorem ipsum', 'Dolor sit amet', 'Consectetur adipiscing'] as $index => $name) {
+            $legacyPartners = $this->em->getRepository(Setting::class)->findOneBy(['settingKey' => '_home_partners_v1']);
+            if ($legacyPartners) {
+                foreach ($this->em->getRepository(Partner::class)->findAll() as $partner) {
+                    $this->em->remove($partner);
+                }
+            }
+            if ($this->em->getRepository(Partner::class)->count([]) === 0 || $legacyPartners) {
+                $partners = [
+                    'Peinture' => ['Farrow & Ball', 'Tollens', 'Heulin Color', 'Mercadier'],
+                    'Plâtrerie / isolation' => ['BATIMATOS', 'SOGEFI', 'La Plateforme du bâtiment'],
+                    'Plomberie / sanitaires' => ['Cedeo', 'Richardson'],
+                    'Matériaux & gros œuvres' => ['Point P', 'Leroy Merlin', 'Gedimat', 'La Plateforme du Bâtiment'],
+                    'Carrelage' => ['Espace Aubade', 'Point P', 'Raboni'],
+                ];
+                $sortOrder = 0;
+                foreach ($partners as $category => $names) {
+                    foreach ($names as $name) {
                         $partner = new Partner();
                         $partner->setName($name);
                         $partner->setCategory($category);
                         $partner->setIsPublished(true);
-                        $partner->setSortOrder($group * 3 + $index);
+                        $partner->setSortOrder($sortOrder++);
                         $this->em->persist($partner);
                     }
                 }
             }
             $marker = new Setting();
-            $marker->setSettingKey('_home_partners_v1');
+            $marker->setSettingKey('_home_partners_v2');
             $marker->setSettingValue('1');
             $this->em->persist($marker);
         });

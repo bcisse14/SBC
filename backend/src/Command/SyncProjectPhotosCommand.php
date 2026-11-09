@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Command;
 
-use App\Entity\{CmsDocument, MediaAsset, PhotoSlot, RealisationCategory, Service, Setting};
+use App\Entity\{CmsDocument, MediaAsset, Partner, PhotoSlot, RealisationCategory, Service, Setting};
 use App\Service\MediaStorage;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\Console\Attribute\AsCommand;
@@ -35,6 +35,18 @@ class SyncProjectPhotosCommand extends Command
             ['02-renovation-chambre/chambre-01.jpeg', 'sdb-05.jpeg', 'Chambre rénovée, mur bleu, parquet et commode en bois'],
             ['03-amenagement-sur-mesure/amenagement-01.jpg', 'amenagement-01.jpg', 'Séjour avec bibliothèque et rangements intégrés sur mesure'],
             ['03-amenagement-sur-mesure/amenagement-02.jpg', 'chambre-01.jpg', 'Espace nuit avec mobilier et rangements intégrés sur mesure'],
+            ['04-photos-accueil/Photo_Accueil_1.jpg', 'Photo_Accueil_1.jpg', 'Projet de rénovation SBC'],
+            ['05-renovation-generale/renovation_generale_1.jpg', 'renovation_generale_1.jpg', 'Rénovation générale, vue du projet'],
+            ['05-renovation-generale/renovation_generale_2.jpg', 'renovation_generale_2.jpg', 'Rénovation générale, détail des finitions'],
+            ['05-renovation-generale/renovation_generale_3.jpg', 'renovation_generale_3.jpg', 'Rénovation générale, espace transformé'],
+            ['06-parquet/parquet-1.jpg', 'parquet-1.jpg', 'Pose de parquet, détail du sol'],
+            ['06-parquet/parquet-2.jpg', 'parquet-2.jpg', 'Pose de parquet, finition'],
+            ['06-parquet/parquet-3.jpg', 'parquet-3.jpg', 'Pose de parquet, sol rénové'],
+            ['07-peinture-finition/peinture-finition_1.png', 'peinture-finition_1.png', 'Peinture et finitions, préparation du chantier'],
+            ['07-peinture-finition/peinture-finition_2.jpg', 'peinture-finition_2.jpg', 'Peinture et finitions, mur rénové'],
+            ['07-peinture-finition/peinture-finition_3.png', 'peinture-finition_3.png', 'Peinture et finitions, détail décoratif'],
+            ['08-electricite/electricite_1.jpg', 'electricite_1.jpg', 'Électricité, installation et raccordement'],
+            ['08-electricite/electricite_2.jpg', 'electricite_2.jpg', 'Électricité, détail de l’installation'],
         ];
         $hashes = [];
         foreach ($photos as [$relative]) {
@@ -44,12 +56,34 @@ class SyncProjectPhotosCommand extends Command
             }
             $hashes[] = hash_file('sha256', $path);
         }
+        $logos = [
+            ['09-logos/Farrow-Ball-Logo-1.webp', 'Farrow & Ball'],
+            ['09-logos/logo_tollens.webp', 'Tollens'],
+            ['09-logos/logo_heulin_color.webp', 'Heulin Color'],
+            ['09-logos/logo-mercadier-partenaire.jpg.webp', 'Mercadier'],
+            ['09-logos/sogefi_logo.png', 'SOGEFI'],
+            ['09-logos/plateforme-du-batiment.svg', 'La Plateforme du bâtiment'],
+            ['09-logos/cedeo_2.webp', 'Cedeo'],
+            ['09-logos/richardson.svg', 'Richardson'],
+            ['09-logos/point_p.webp', 'Point P'],
+            ['09-logos/leroy-merlin-logo.png', 'Leroy Merlin'],
+            ['09-logos/gedimat.png', 'Gedimat'],
+            ['09-logos/espace_aubade_2.webp', 'Espace Aubade'],
+            ['09-logos/raboni.png', 'Raboni'],
+        ];
+        foreach ($logos as [$relative]) {
+            $path = $this->projectDir . '/fixtures/photos/' . $relative;
+            if (!is_file($path)) {
+                throw new \RuntimeException('Logo source manquant : ' . $relative);
+            }
+            $hashes[] = hash_file('sha256', $path);
+        }
         $revision = hash('sha256', implode('', $hashes));
         $marker = $this->em->getRepository(Setting::class)->findOneBy(['settingKey' => '_project_photos_revision']);
         $refresh = $marker?->getSettingValue() !== $revision;
         $assets = [];
 
-        $this->em->wrapInTransaction(function () use ($photos, $refresh, $revision, $marker, &$assets): void {
+        $this->em->wrapInTransaction(function () use ($photos, $logos, $refresh, $revision, $marker, &$assets): void {
             foreach ($photos as [$relative, $legacyName, $alt]) {
                 $name = basename($relative);
                 $asset = $this->em->getRepository(MediaAsset::class)->findOneBy(['originalName' => $name])
@@ -68,12 +102,58 @@ class SyncProjectPhotosCommand extends Command
                 }
                 $assets[$name] = $asset;
             }
+            foreach ($logos as [$relative, $partnerName]) {
+                $name = basename($relative);
+                $mime = (new \finfo(FILEINFO_MIME_TYPE))->file($this->projectDir . '/fixtures/photos/' . $relative);
+                $asset = $this->em->getRepository(MediaAsset::class)->findOneBy(['originalName' => $name]);
+                if (!$asset || $refresh) {
+                    $asset ??= new MediaAsset();
+                    $source = $this->projectDir . '/fixtures/photos/' . $relative;
+                    $ingestMime = $mime ?: 'image/png';
+                    $temporaryPng = null;
+                    if ($ingestMime === 'image/svg+xml') {
+                        $temporaryPng = tempnam(sys_get_temp_dir(), 'sbc-logo-') . '.png';
+                        $svg = new \Imagick($source);
+                        $svg->setImageFormat('png');
+                        $svg->writeImage($temporaryPng);
+                        $svg->clear();
+                        $source = $temporaryPng;
+                        $ingestMime = 'image/png';
+                    }
+                    $stored = $this->storage->ingest($source, $name, $ingestMime, 'Logo ' . $partnerName);
+                    if ($temporaryPng && is_file($temporaryPng)) {
+                        unlink($temporaryPng);
+                    }
+                    $asset->setPath($stored['path']);
+                    $asset->setOriginalName($name);
+                    $asset->setMimeType($stored['mimeType']);
+                    $asset->setAltText('Logo ' . $partnerName);
+                    $asset->setWidth($stored['width']);
+                    $asset->setHeight($stored['height']);
+                    $asset->setVariants($stored['variants']);
+                    $this->em->persist($asset);
+                }
+                $assets[$name] = $asset;
+            }
             $this->em->flush();
+            foreach ($logos as [$relative, $partnerName]) {
+                $normalizedName = mb_strtolower($partnerName);
+                foreach ($this->em->getRepository(Partner::class)->findAll() as $partner) {
+                    if (mb_strtolower($partner->getName()) !== $normalizedName) {
+                        continue;
+                    }
+                    $partner->setLogoMediaId($assets[basename($relative)]->getId());
+                }
+            }
 
             $assignments = [
-                'renovation-salle-de-bains' => ['sdb-01.jpeg', 'sdb-02.jpeg', 'sdb-03.jpeg', 'sdb-04.jpeg'],
-                'renovation-chambre' => ['chambre-01.jpeg'],
-                'amenagement-sur-mesure' => ['amenagement-01.jpg', 'amenagement-02.jpg'],
+                'plomberie-sanitaires' => ['sdb-01.jpeg', 'sdb-02.jpeg', 'sdb-03.jpeg', 'sdb-04.jpeg'],
+                'renovation-interieure' => ['chambre-01.jpeg'],
+                'menuiserie' => ['amenagement-01.jpg', 'amenagement-02.jpg'],
+                'renovation-generale' => ['renovation_generale_1.jpg', 'renovation_generale_2.jpg', 'renovation_generale_3.jpg'],
+                'parquet' => ['parquet-1.jpg', 'parquet-2.jpg', 'parquet-3.jpg'],
+                'peinture-finitions' => ['peinture-finition_1.png', 'peinture-finition_2.jpg', 'peinture-finition_3.png'],
+                'electricite' => ['electricite_1.jpg', 'electricite_2.jpg'],
             ];
             $knownIds = array_map(static fn (MediaAsset $asset) => $asset->getId(), $assets);
             foreach ($assignments as $slug => $names) {
@@ -83,7 +163,7 @@ class SyncProjectPhotosCommand extends Command
                 }
                 $extraIds = array_values(array_diff($category->getGallery(), $knownIds));
                 $category->setGallery([...array_map(static fn (string $name) => $assets[$name]->getId(), $names), ...$extraIds]);
-                if ($slug === 'renovation-chambre') {
+                if ($slug === 'renovation-interieure') {
                     if ($category->getDescription() === 'Aménagement d’une chambre au design moderne, avec rangements sur mesure, peinture décorative et parquet chaleureux.') {
                         $category->setDescription('Rénovation d’une chambre avec peinture bleu profond, parquet chaleureux et finitions soignées.');
                     }
@@ -91,7 +171,7 @@ class SyncProjectPhotosCommand extends Command
                         $category->setTagService($this->em->getRepository(Service::class)->findOneBy(['name' => 'Peinture']));
                     }
                 }
-                if ($slug === 'amenagement-sur-mesure' && $category->getDescription() === 'Création d’un espace nuit avec mobilier intégré, rangements optimisés et décoration murale aux tons naturels.') {
+                if ($slug === 'menuiserie' && $category->getDescription() === 'Création d’un espace nuit avec mobilier intégré, rangements optimisés et décoration murale aux tons naturels.') {
                     $category->setDescription('Du séjour à l’espace nuit, des rangements et du mobilier intégrés pour optimiser chaque espace.');
                 }
             }
@@ -104,10 +184,10 @@ class SyncProjectPhotosCommand extends Command
             }
             $hero = $this->em->getRepository(PhotoSlot::class)->findOneBy(['slotKey' => 'PH-ACCUEIL-HERO']);
             if ($hero) {
-                $hero->setMediaAssetId($assets['amenagement-01.jpg']->getId());
-                $hero->setRatio('1:1');
-                $hero->setMinimumSize('457x418, source fournie');
-                $hero->setIdealDescription('Aménagement sur mesure, bibliothèque et rangements intégrés dans un séjour');
+                $hero->setMediaAssetId($assets['Photo_Accueil_1.jpg']->getId());
+                $hero->setRatio('3:2');
+                $hero->setMinimumSize('605x403, source fournie');
+                $hero->setIdealDescription('Photo d’accueil du projet SBC');
             }
 
             $home = $this->em->getRepository(CmsDocument::class)->findOneBy(['resource' => 'pages', 'slug' => '']);
@@ -116,7 +196,7 @@ class SyncProjectPhotosCommand extends Command
                 foreach ($data['sections'] ?? [] as $index => $section) {
                     if (($section['type'] ?? '') === 'hero') {
                         $data['sections'][$index]['photoSlotKey'] = 'PH-ACCUEIL-HERO';
-                        $data['sections'][$index]['mediaAssetId'] = $assets['amenagement-01.jpg']->getId();
+                        $data['sections'][$index]['mediaAssetId'] = $assets['Photo_Accueil_1.jpg']->getId();
                         if (($section['title'] ?? '') === 'Votre vision, notre expertise. Nous transformons vos espaces intérieurs et extérieurs avec audace et précision.') {
                             $data['sections'][$index]['title'] = 'Des espaces pensés pour votre vie.';
                         }
@@ -143,7 +223,7 @@ class SyncProjectPhotosCommand extends Command
             $this->em->persist($setting);
         });
 
-        $output->writeln('<info>7 photos synchronisées : 4 salles de bains verticales, 1 chambre, 2 aménagements. Photo principale : amenagement-01.jpg.</info>');
+        $output->writeln('<info>Photos synchronisées pour les expertises et l’accueil. Photo principale : Photo_Accueil_1.jpg.</info>');
 
         return Command::SUCCESS;
     }

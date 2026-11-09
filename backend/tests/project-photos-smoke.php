@@ -23,6 +23,10 @@ $assignments = [
     'plomberie-sanitaires' => ['sdb-01.jpeg', 'sdb-02.jpeg', 'sdb-03.jpeg', 'sdb-04.jpeg'],
     'renovation-interieure' => ['chambre-01.jpeg'],
     'menuiserie' => ['amenagement-01.jpg', 'amenagement-02.jpg'],
+    'renovation-generale' => ['renovation_generale_1.jpg', 'renovation_generale_2.jpg', 'renovation_generale_3.jpg'],
+    'peinture-finitions' => ['peinture-finition_1.png', 'peinture-finition_2.jpg', 'peinture-finition_3.png'],
+    'parquet' => ['parquet-1.jpg', 'parquet-2.jpg', 'parquet-3.jpg'],
+    'electricite' => ['electricite_1.jpg', 'electricite_2.jpg'],
 ];
 $seen = [];
 foreach ($assignments as $slug => $names) {
@@ -55,9 +59,9 @@ foreach ($assignments as $slug => $names) {
     }
     $assert(array_slice($category['gallery'], 0, count($expectedIds)) === $expectedIds, 'Mauvais classement : ' . $slug);
 }
-$heroAsset = $em->getRepository(MediaAsset::class)->findOneBy(['originalName' => 'amenagement-01.jpg']);
+$heroAsset = $em->getRepository(MediaAsset::class)->findOneBy(['originalName' => 'Photo_Accueil_1.jpg']);
 $home = array_values(array_filter($data['pages'], static fn (array $page) => $page['slug'] === ''))[0];
 $hero = array_values(array_filter($home['sections'], static fn (array $section) => $section['type'] === 'hero'))[0];
-$assert($hero['mediaAssetId'] === $heroAsset->getId(), 'La photo principale doit être amenagement-01.jpg.');
-$assert(count($seen) === 7, 'Le jeu de photos doit contenir exactement sept photos connues.');
+$assert($hero['mediaAssetId'] === $heroAsset->getId(), 'La photo principale doit être Photo_Accueil_1.jpg.');
+$assert(count($seen) === 18, 'Le jeu de photos doit contenir exactement dix-huit photos connues.');
 echo "OK : $checks contrôles, classement, originaux et variantes, orientation portrait et photo principale.\n";
