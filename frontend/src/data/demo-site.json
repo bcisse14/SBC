@@ -159,7 +159,7 @@
           "alignment": "left",
           "hideImage": false,
           "linkLabel": "Demander un devis",
-          "mediaAssetId": 8,
+          "mediaAssetId": 40,
           "photoSlotKey": "PH-ACCUEIL-HERO",
           "presentation": "auto"
         },
@@ -604,7 +604,7 @@
       "seoDescription": "",
       "showInNavigation": true,
       "id": 4,
-      "sortOrder": 3,
+      "sortOrder": 2,
       "isPublished": true
     },
     {
@@ -667,7 +667,7 @@
       "seoDescription": "",
       "showInNavigation": true,
       "id": 5,
-      "sortOrder": 4,
+      "sortOrder": 3,
       "isPublished": true
     },
     {
@@ -886,7 +886,7 @@
       "seoDescription": "",
       "showInNavigation": false,
       "id": 7,
-      "sortOrder": 5,
+      "sortOrder": 4,
       "isPublished": true
     },
     {
@@ -923,7 +923,7 @@
       "seoDescription": "",
       "showInNavigation": false,
       "id": 8,
-      "sortOrder": 6,
+      "sortOrder": 5,
       "isPublished": true
     }
   ],
@@ -1087,7 +1087,11 @@
       "serviceId": null,
       "serviceGroup": null,
       "serviceName": null,
-      "gallery": []
+      "gallery": [
+        41,
+        42,
+        43
+      ]
     },
     {
       "id": 2,
@@ -1111,7 +1115,11 @@
       "serviceId": null,
       "serviceGroup": null,
       "serviceName": null,
-      "gallery": []
+      "gallery": [
+        47,
+        48,
+        49
+      ]
     },
     {
       "id": 3,
@@ -1136,7 +1144,11 @@
       "serviceId": null,
       "serviceGroup": null,
       "serviceName": null,
-      "gallery": []
+      "gallery": [
+        44,
+        45,
+        46
+      ]
     },
     {
       "id": 21,
@@ -1147,7 +1159,10 @@
       "serviceId": null,
       "serviceGroup": null,
       "serviceName": null,
-      "gallery": []
+      "gallery": [
+        50,
+        51
+      ]
     },
     {
       "id": 1,
@@ -1169,7 +1184,7 @@
   "media": {
     "2": {
       "id": 2,
-      "version": "95c7d92ec26f",
+      "version": "e357796c58ef",
       "alt": "Salle de bains, douche vitrée et meuble vasque",
       "width": 517,
       "height": 690,
@@ -1179,7 +1194,7 @@
     },
     "3": {
       "id": 3,
-      "version": "10838cade00e",
+      "version": "e95d19415d4e",
       "alt": "Salle de bains, douche et sèche-serviettes",
       "width": 562,
       "height": 750,
@@ -1189,7 +1204,7 @@
     },
     "4": {
       "id": 4,
-      "version": "5156117b4585",
+      "version": "d9f6b06781dc",
       "alt": "Salle de bains, double vasque et douche à l’italienne",
       "width": 693,
       "height": 804,
@@ -1199,7 +1214,7 @@
     },
     "5": {
       "id": 5,
-      "version": "1c922ecd1a6b",
+      "version": "86be9cb0e9cb",
       "alt": "Salle de bains, carrelage sombre et miroirs lumineux",
       "width": 608,
       "height": 811,
@@ -1209,7 +1224,7 @@
     },
     "6": {
       "id": 6,
-      "version": "f4bf909214db",
+      "version": "7647fd294186",
       "alt": "Chambre rénovée, mur bleu, parquet et commode en bois",
       "width": 649,
       "height": 788,
@@ -1219,7 +1234,7 @@
     },
     "7": {
       "id": 7,
-      "version": "6a99705ebb4b",
+      "version": "f3ebc772d3cc",
       "alt": "Espace nuit avec mobilier et rangements intégrés sur mesure",
       "width": 501,
       "height": 446,
@@ -1229,99 +1244,383 @@
     },
     "8": {
       "id": 8,
-      "version": "8348b743544b",
+      "version": "0d96d9c78992",
       "alt": "Séjour avec bibliothèque et rangements intégrés sur mesure",
       "width": 457,
       "height": 418,
       "focalPoint": null,
       "variants": [],
       "demoPath": "/demo/media/8.jpg"
+    },
+    "40": {
+      "id": 40,
+      "version": "44a1005cd1f5",
+      "alt": "Projet de rénovation SBC",
+      "width": 605,
+      "height": 403,
+      "focalPoint": null,
+      "variants": [],
+      "demoPath": "/demo/media/40.jpg"
+    },
+    "41": {
+      "id": 41,
+      "version": "3c4f6f1f4d18",
+      "alt": "Rénovation générale, vue du projet",
+      "width": 820,
+      "height": 427,
+      "focalPoint": null,
+      "variants": [],
+      "demoPath": "/demo/media/41.jpg"
+    },
+    "42": {
+      "id": 42,
+      "version": "93b4350ff86f",
+      "alt": "Rénovation générale, détail des finitions",
+      "width": 628,
+      "height": 734,
+      "focalPoint": null,
+      "variants": [],
+      "demoPath": "/demo/media/42.jpg"
+    },
+    "43": {
+      "id": 43,
+      "version": "bac1e5e2fe6b",
+      "alt": "Rénovation générale, espace transformé",
+      "width": 438,
+      "height": 255,
+      "focalPoint": null,
+      "variants": [],
+      "demoPath": "/demo/media/43.jpg"
+    },
+    "44": {
+      "id": 44,
+      "version": "b575fba9f560",
+      "alt": "Pose de parquet, détail du sol",
+      "width": 689,
+      "height": 725,
+      "focalPoint": null,
+      "variants": [],
+      "demoPath": "/demo/media/44.jpg"
+    },
+    "45": {
+      "id": 45,
+      "version": "1a1b4c4f2db4",
+      "alt": "Pose de parquet, finition",
+      "width": 613,
+      "height": 753,
+      "focalPoint": null,
+      "variants": [],
+      "demoPath": "/demo/media/45.jpg"
+    },
+    "46": {
+      "id": 46,
+      "version": "9bc4ffc86616",
+      "alt": "Pose de parquet, sol rénové",
+      "width": 824,
+      "height": 875,
+      "focalPoint": null,
+      "variants": [],
+      "demoPath": "/demo/media/46.jpg"
+    },
+    "47": {
+      "id": 47,
+      "version": "c97a953683f6",
+      "alt": "Peinture et finitions, préparation du chantier",
+      "width": 409,
+      "height": 242,
+      "focalPoint": null,
+      "variants": [],
+      "demoPath": "/demo/media/47.jpg"
+    },
+    "48": {
+      "id": 48,
+      "version": "28b8eb022169",
+      "alt": "Peinture et finitions, mur rénové",
+      "width": 451,
+      "height": 244,
+      "focalPoint": null,
+      "variants": [],
+      "demoPath": "/demo/media/48.jpg"
+    },
+    "49": {
+      "id": 49,
+      "version": "4df0d7ad88ba",
+      "alt": "Peinture et finitions, détail décoratif",
+      "width": 414,
+      "height": 371,
+      "focalPoint": null,
+      "variants": [],
+      "demoPath": "/demo/media/49.jpg"
+    },
+    "50": {
+      "id": 50,
+      "version": "4cfbd430fd34",
+      "alt": "Électricité, installation et raccordement",
+      "width": 922,
+      "height": 833,
+      "focalPoint": null,
+      "variants": [],
+      "demoPath": "/demo/media/50.jpg"
+    },
+    "51": {
+      "id": 51,
+      "version": "b6fcc1940373",
+      "alt": "Électricité, détail de l’installation",
+      "width": 783,
+      "height": 1043,
+      "focalPoint": null,
+      "variants": [],
+      "demoPath": "/demo/media/51.jpg"
+    },
+    "57": {
+      "id": 57,
+      "version": "7688456b2050",
+      "alt": "Logo Tollens",
+      "width": 600,
+      "height": 300,
+      "focalPoint": null,
+      "variants": [],
+      "demoPath": "/demo/media/57.webp"
+    },
+    "58": {
+      "id": 58,
+      "version": "a306332c68cb",
+      "alt": "Logo Heulin Color",
+      "width": 400,
+      "height": 161,
+      "focalPoint": null,
+      "variants": [],
+      "demoPath": "/demo/media/58.webp"
+    },
+    "59": {
+      "id": 59,
+      "version": "a5c349be86e9",
+      "alt": "Logo Mercadier",
+      "width": 860,
+      "height": 619,
+      "focalPoint": null,
+      "variants": [],
+      "demoPath": "/demo/media/59.webp"
+    },
+    "60": {
+      "id": 60,
+      "version": "adaa9d6a3666",
+      "alt": "Logo SOGEFI",
+      "width": 203,
+      "height": 70,
+      "focalPoint": null,
+      "variants": [],
+      "demoPath": "/demo/media/60.png"
+    },
+    "61": {
+      "id": 61,
+      "version": "e7e334a1f017",
+      "alt": "Logo La Plateforme du bâtiment",
+      "width": 452,
+      "height": 182,
+      "focalPoint": null,
+      "variants": [],
+      "demoPath": "/demo/media/61.png"
+    },
+    "63": {
+      "id": 63,
+      "version": "e7c9a1d3cf75",
+      "alt": "Logo Richardson",
+      "width": 697,
+      "height": 121,
+      "focalPoint": null,
+      "variants": [],
+      "demoPath": "/demo/media/63.png"
+    },
+    "64": {
+      "id": 64,
+      "version": "bd6ffb54d549",
+      "alt": "Logo Point P",
+      "width": 165,
+      "height": 45,
+      "focalPoint": null,
+      "variants": [],
+      "demoPath": "/demo/media/64.webp"
+    },
+    "65": {
+      "id": 65,
+      "version": "9c58b2097e31",
+      "alt": "Logo Leroy Merlin",
+      "width": 600,
+      "height": 600,
+      "focalPoint": null,
+      "variants": [],
+      "demoPath": "/demo/media/65.png"
+    },
+    "66": {
+      "id": 66,
+      "version": "8621c5dd73a9",
+      "alt": "Logo Gedimat",
+      "width": 346,
+      "height": 129,
+      "focalPoint": null,
+      "variants": [],
+      "demoPath": "/demo/media/66.png"
+    },
+    "68": {
+      "id": 68,
+      "version": "afaaf110182a",
+      "alt": "Logo Raboni",
+      "width": 100,
+      "height": 100,
+      "focalPoint": null,
+      "variants": [],
+      "demoPath": "/demo/media/68.png"
+    },
+    "69": {
+      "id": 69,
+      "version": "9007d02e2dff",
+      "alt": "Logo Farrow & Ball",
+      "width": 500,
+      "height": 333,
+      "focalPoint": null,
+      "variants": [],
+      "demoPath": "/demo/media/69.webp"
+    },
+    "72": {
+      "id": 72,
+      "version": "a8d80fbaae85",
+      "alt": "Logo Cedeo",
+      "width": 250,
+      "height": 250,
+      "focalPoint": null,
+      "variants": [],
+      "demoPath": "/demo/media/72.webp"
+    },
+    "73": {
+      "id": 73,
+      "version": "c2d9b4345957",
+      "alt": "Logo Espace Aubade",
+      "width": 561,
+      "height": 473,
+      "focalPoint": null,
+      "variants": [],
+      "demoPath": "/demo/media/73.webp"
+    },
+    "74": {
+      "id": 74,
+      "version": "26830555d5ab",
+      "alt": "Logo BATIMATOS",
+      "width": 738,
+      "height": 285,
+      "focalPoint": null,
+      "variants": [],
+      "demoPath": "/demo/media/74.png"
     }
   },
   "reviews": [],
   "certifications": [],
   "partners": [
     {
-      "name": "Lorem ipsum",
+      "name": "Farrow & Ball",
       "category": "Peinture",
       "websiteUrl": null,
-      "logoMediaId": null
+      "logoMediaId": 69
     },
     {
-      "name": "Dolor sit amet",
+      "name": "Tollens",
       "category": "Peinture",
       "websiteUrl": null,
-      "logoMediaId": null
+      "logoMediaId": 57
     },
     {
-      "name": "Consectetur adipiscing",
+      "name": "Heulin Color",
       "category": "Peinture",
       "websiteUrl": null,
-      "logoMediaId": null
+      "logoMediaId": 58
     },
     {
-      "name": "Lorem ipsum",
-      "category": "Plâtrerie, cloisons, isolation",
+      "name": "Mercadier",
+      "category": "Peinture",
       "websiteUrl": null,
-      "logoMediaId": null
+      "logoMediaId": 59
     },
     {
-      "name": "Dolor sit amet",
-      "category": "Plâtrerie, cloisons, isolation",
+      "name": "BATIMATOS",
+      "category": "Plâtrerie / isolation",
       "websiteUrl": null,
-      "logoMediaId": null
+      "logoMediaId": 74
     },
     {
-      "name": "Consectetur adipiscing",
-      "category": "Plâtrerie, cloisons, isolation",
+      "name": "SOGEFI",
+      "category": "Plâtrerie / isolation",
       "websiteUrl": null,
-      "logoMediaId": null
+      "logoMediaId": 60
     },
     {
-      "name": "Lorem ipsum",
-      "category": "Salles de bains / sanitaires",
+      "name": "La Plateforme du bâtiment",
+      "category": "Plâtrerie / isolation",
       "websiteUrl": null,
-      "logoMediaId": null
+      "logoMediaId": 61
     },
     {
-      "name": "Dolor sit amet",
-      "category": "Salles de bains / sanitaires",
+      "name": "Cedeo",
+      "category": "Plomberie / sanitaires",
       "websiteUrl": null,
-      "logoMediaId": null
+      "logoMediaId": 72
     },
     {
-      "name": "Consectetur adipiscing",
-      "category": "Salles de bains / sanitaires",
+      "name": "Richardson",
+      "category": "Plomberie / sanitaires",
       "websiteUrl": null,
-      "logoMediaId": null
+      "logoMediaId": 63
     },
     {
-      "name": "Lorem ipsum",
-      "category": "Électricité et domotique",
+      "name": "Point P",
+      "category": "Matériaux & gros œuvres",
       "websiteUrl": null,
-      "logoMediaId": null
+      "logoMediaId": 64
     },
     {
-      "name": "Dolor sit amet",
-      "category": "Électricité et domotique",
+      "name": "Leroy Merlin",
+      "category": "Matériaux & gros œuvres",
       "websiteUrl": null,
-      "logoMediaId": null
+      "logoMediaId": 65
     },
     {
-      "name": "Consectetur adipiscing",
-      "category": "Électricité et domotique",
+      "name": "Gedimat",
+      "category": "Matériaux & gros œuvres",
       "websiteUrl": null,
-      "logoMediaId": null
+      "logoMediaId": 66
+    },
+    {
+      "name": "La Plateforme du Bâtiment",
+      "category": "Matériaux & gros œuvres",
+      "websiteUrl": null,
+      "logoMediaId": 61
+    },
+    {
+      "name": "Espace Aubade",
+      "category": "Carrelage",
+      "websiteUrl": null,
+      "logoMediaId": 73
+    },
+    {
+      "name": "Point P",
+      "category": "Carrelage",
+      "websiteUrl": null,
+      "logoMediaId": 64
+    },
+    {
+      "name": "Raboni",
+      "category": "Carrelage",
+      "websiteUrl": null,
+      "logoMediaId": 68
     }
   ],
   "faq": [],
   "photoSlots": [
     {
       "slotKey": "PH-ACCUEIL-HERO",
-      "ratio": "1:1",
-      "minimumSize": "457x418, source fournie",
-      "idealDescription": "Aménagement sur mesure, bibliothèque et rangements intégrés dans un séjour",
-      "mediaAssetId": 8
+      "ratio": "3:2",
+      "minimumSize": "605x403, source fournie",
+      "idealDescription": "Photo d’accueil du projet SBC",
+      "mediaAssetId": 40
     },
     {
       "slotKey": "PH-ACCUEIL-INTERIEUR",
