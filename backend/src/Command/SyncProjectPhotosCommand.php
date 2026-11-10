@@ -61,6 +61,7 @@ class SyncProjectPhotosCommand extends Command
             ['09-logos/logo_tollens.webp', 'Tollens'],
             ['09-logos/logo_heulin_color.webp', 'Heulin Color'],
             ['09-logos/logo-mercadier-partenaire.jpg.webp', 'Mercadier'],
+            ['09-logos/BATIMATOS.png', 'BATIMATOS'],
             ['09-logos/sogefi_logo.png', 'SOGEFI'],
             ['09-logos/plateforme-du-batiment.svg', 'La Plateforme du bâtiment'],
             ['09-logos/cedeo_2.webp', 'Cedeo'],
